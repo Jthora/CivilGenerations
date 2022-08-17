@@ -52,6 +52,7 @@ final class GameCore: ObservableObject {
         let x = Int((point.x + (CONVERSION_SCALE/2)) / CONVERSION_SCALE)
         let y = Int((point.y + (CONVERSION_SCALE/2)) / CONVERSION_SCALE)
         let w = LifeNode(x: Int32(x), y: Int32(y))
+        let h = w.h
         print("Click \(w.string) \(point)")
         if lifeNodeField.check(w) {
             lifeNodeField.reset(w)
@@ -59,13 +60,6 @@ final class GameCore: ObservableObject {
             sprites[w.h] = nil
         } else {
             lifeNodeField.set(w)
-        }
-        print("Nodes: \(lifeNodeField.field.count)")
-        updateSprites()
-    }
-    
-    func updateSprites() {
-        for (h,w) in lifeNodeField.field {
             if let sprite = sprites[h] {
                 guard let c = lifeNodeField.counts[h],
                         sprite.iconType.rawValue != c  else {return}
@@ -78,6 +72,16 @@ final class GameCore: ObservableObject {
                 sprites[h] = sprite
                 scene.addChild(sprite)
             }
+        }
+        print("Nodes: \(lifeNodeField.field.count)")
+        updateSprites()
+    }
+    
+    func updateSprites() {
+        for (h,sprite) in sprites {
+            guard let c = lifeNodeField.counts[h],
+                    sprite.iconType.rawValue != c  else {return}
+            sprite.iconType = GameLifeSpriteNode.IconType(c)
         }
     }
 }
