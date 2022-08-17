@@ -10,7 +10,10 @@ import SpriteKit
 final class GameCore: ObservableObject {
     
     static let shared = GameCore()
-    private init() {}
+    private init() {
+        scene.gameDelegate = self
+        setup()
+    }
     
     @Published var gameState: GameState = .paused
     @Published var sprites: [LifeNodeHash:GameLifeSpriteNode] = [:]
@@ -18,7 +21,7 @@ final class GameCore: ObservableObject {
     
     @Published var lifeNodeField = LifeNodeField()
     
-    @Published var scene: SKScene = {
+    @Published var scene: GameScene = {
         let scene = GameScene()
         scene.size = CGSize(width: UIScreen.main.bounds.width,
                             height: UIScreen.main.bounds.height)
@@ -60,15 +63,19 @@ final class GameCore: ObservableObject {
                 sprite.iconType = GameLifeSpriteNode.IconType(c)
             } else {
                 let sprite = GameLifeSpriteNode()
+                sprite.position = h.position
+                print(h.position)
                 sprite.iconType = GameLifeSpriteNode.IconType(c)
                 sprites[h] = sprite
+                scene.addChild(sprite)
             }
         }
     }
 }
 
 extension GameCore: GameSceneDelegate {
-    func update() {
+    
+    func updateGame() {
         switch gameState {
         case .running:
             lifeNodeField.step()
@@ -76,5 +83,9 @@ extension GameCore: GameSceneDelegate {
             
         case .paused: ()
         }
+    }
+    
+    func onTouch(point: CGPoint) {
+        click(point)
     }
 }

@@ -72,4 +72,7 @@ extension LifeNodeHash {
     init(_ point:CGPoint) {
         self = Int64(hi: Int32(point.x) + OFFSET, lo: Int32(point.y) + OFFSET)
     }
+    var position:CGPoint {
+        return CGPoint(x: Int(hi - OFFSET), y: Int(lo - OFFSET))
+    }
 }
