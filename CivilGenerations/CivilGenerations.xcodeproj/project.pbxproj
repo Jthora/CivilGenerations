@@ -28,6 +28,7 @@
 		FA45AB6E28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6D28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift */; };
 		FA45AB7028ACCAA700D454A8 /* LifeNodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6F28ACCAA700D454A8 /* LifeNodeState.swift */; };
 		FA45AB7228AD131C00D454A8 /* GameIconMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB7128AD131C00D454A8 /* GameIconMode.swift */; };
+		FA45AB7428AD1FE900D454A8 /* GameCountSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB7328AD1FE900D454A8 /* GameCountSpriteNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		FA45AB6D28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLifeSpriteNodeIconType.swift; sourceTree = "<group>"; };
 		FA45AB6F28ACCAA700D454A8 /* LifeNodeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeNodeState.swift; sourceTree = "<group>"; };
 		FA45AB7128AD131C00D454A8 /* GameIconMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIconMode.swift; sourceTree = "<group>"; };
+		FA45AB7328AD1FE900D454A8 /* GameCountSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCountSpriteNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				FA45AB6428ACB26F00D454A8 /* GameCore.swift */,
 				FA45AB6728ACBA8300D454A8 /* GameState.swift */,
 				FA45AB6928ACBE9E00D454A8 /* GameSpeed.swift */,
+				FA45AB7328AD1FE900D454A8 /* GameCountSpriteNode.swift */,
 				FA45AB6B28ACC5E000D454A8 /* GameLifeSpriteNode.swift */,
 				FA45AB6D28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift */,
 				FA45AB7128AD131C00D454A8 /* GameIconMode.swift */,
@@ -319,6 +322,7 @@
 				FA45AB7028ACCAA700D454A8 /* LifeNodeState.swift in Sources */,
 				FA12AE4328ACAD380070A915 /* BitMath.swift in Sources */,
 				FA45AB6C28ACC5E100D454A8 /* GameLifeSpriteNode.swift in Sources */,
+				FA45AB7428AD1FE900D454A8 /* GameCountSpriteNode.swift in Sources */,
 				FA45AB6E28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift in Sources */,
 				FA12AE4028ACAD380070A915 /* LifeNodeField.swift in Sources */,
 				FA12AE4428ACAD380070A915 /* LifeNode.swift in Sources */,

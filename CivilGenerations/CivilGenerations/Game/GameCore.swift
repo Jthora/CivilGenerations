@@ -24,7 +24,11 @@ final class GameCore: ObservableObject {
             }
         }
     }
-    @Published var sprites: [LifeNodeHash:GameLifeSpriteNode] = [:]
+    
+    @Published var numberSpriteParent = SKSpriteNode()
+    @Published var iconSpriteParent = SKSpriteNode()
+    @Published var numberSprites: [LifeNodeHash:GameCountSpriteNode] = [:]
+    @Published var iconSprites: [LifeNodeHash:GameLifeSpriteNode] = [:]
     @Published var ruins: [LifeNodeHash:GameLifeSpriteNode] = [:]
     
     @Published var lifeNodeField = LifeNodeField()
@@ -61,6 +65,13 @@ final class GameCore: ObservableObject {
     func setup() {
         gameState = .paused
         lifeNodeField.clear()
+        scene.removeAllChildren()
+        
+        numberSpriteParent.removeAllChildren()
+        iconSpriteParent.removeAllChildren()
+        
+        scene.addChild(numberSpriteParent)
+        scene.addChild(iconSpriteParent)
     }
     
     func click(_ point:CGPoint) {
@@ -72,11 +83,13 @@ final class GameCore: ObservableObject {
         print("Click \(w.string) \(point)")
         if lifeNodeField.check(w) {
             lifeNodeField.reset(w)
-            sprites[w.h]?.removeFromParent()
-            sprites[w.h] = nil
+            iconSprites[w.h]?.removeFromParent()
+            iconSprites[w.h] = nil
         } else {
+            
             lifeNodeField.set(w)
-            if let sprite = sprites[h] {
+            
+            if let sprite = iconSprites[h] {
                 guard let c = lifeNodeField.counts[h],
                         sprite.iconType.rawValue != c  else {return}
                 sprite.iconType = GameLifeSpriteNode.IconType(c)
@@ -85,8 +98,8 @@ final class GameCore: ObservableObject {
                 sprite.position = h.position
                 print("Sprite \(w.string) \(h.position)")
                 sprite.iconType = GameLifeSpriteNode.IconType(1)
-                sprites[h] = sprite
-                scene.addChild(sprite)
+                iconSprites[h] = sprite
+                iconSpriteParent.addChild(sprite)
             }
         }
         print("Nodes: \(lifeNodeField.field.count)")
@@ -95,27 +108,75 @@ final class GameCore: ObservableObject {
     }
     
     func updateSprites() {
-        var spritesToRemove:[LifeNodeHash] = []
+        var iconSpritesToRemove:[LifeNodeHash] = []
         
-        for (h,sprite) in sprites {
+        // Update Existing Icon Sprites
+        for (h,sprite) in iconSprites {
             guard lifeNodeField.field[h] != nil else {
-                spritesToRemove.append(h)
+                iconSpritesToRemove.append(h)
                 continue
             }
             guard let c = lifeNodeField.counts[h] else {
                 continue
             }
-            switch iconMode {
-            case .icons:
-                sprite.iconType = GameLifeSpriteNode.IconType(c)
-            case .numbers:
-                sprite.numberValue = c
+            
+            iconSprites[h]?.iconType = GameLifeSpriteNode.IconType(c)
+        }
+        
+        // New Icon Sprites
+        for (h,_) in lifeNodeField.field {
+            if iconSprites[h] != nil {
+                guard let c = lifeNodeField.counts[h] else {
+                    continue
+                }
+                iconSprites[h]?.iconType = GameLifeSpriteNode.IconType(c)
+            } else {
+                guard let c = lifeNodeField.counts[h] else {
+                    continue
+                }
+                let newSprite = GameLifeSpriteNode()
+                newSprite.iconType = GameLifeSpriteNode.IconType(c)
+                newSprite.position = h.position
+                iconSprites[h] = newSprite
             }
         }
         
-        for h in spritesToRemove {
-            sprites[h]?.removeFromParent()
-            sprites[h] = nil
+        // Remove Leftover Icon Sprites
+        for h in iconSpritesToRemove {
+            iconSprites[h]?.removeFromParent()
+            iconSprites[h] = nil
+        }
+        
+        // Update Number Sprites
+        
+        // Update Existing Number Sprites
+        var numberSpritesToRemove:[LifeNodeHash] = []
+        for (h,sprite) in numberSprites {
+            guard let c = lifeNodeField.counts[h] else {
+                numberSpritesToRemove.append(h)
+                continue
+            }
+            
+            sprite.numberValue = c
+        }
+        
+        // New Number Sprites
+        for (h,c) in lifeNodeField.counts {
+            if let sprite = numberSprites[h] {
+                sprite.numberValue = c
+            } else {
+                let newSprite = GameCountSpriteNode()
+                newSprite.numberValue = c
+                numberSprites[h] = newSprite
+                newSprite.position = h.position
+                numberSpriteParent.addChild(newSprite)
+            }
+        }
+        
+        // Remove Number Sprites
+        for h in numberSpritesToRemove {
+            numberSprites[h]?.removeFromParent()
+            numberSprites[h] = nil
         }
     }
 }

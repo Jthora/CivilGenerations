@@ -20,7 +20,6 @@ class GameLifeSpriteNode: SKSpriteNode {
             _iconType = newValue
             guard let labelNode = self.labelNode else {
                 labelNode = iconType.labelNode
-                labelNode!.text = iconType.emoji
                 addChild(labelNode!)
                 return
             }
@@ -29,25 +28,6 @@ class GameLifeSpriteNode: SKSpriteNode {
         
         get {
             return _iconType
-        }
-    }
-    
-    private var _numberValue:Int = 0
-    var numberValue:Int {
-        set {
-            guard _numberValue != newValue else {return}
-            _numberValue = newValue
-            guard let labelNode = self.labelNode else {
-                labelNode = iconType.labelNode
-                labelNode!.text = "\(newValue)"
-                addChild(labelNode!)
-                return
-            }
-            labelNode.text = "\(newValue)"
-        }
-        
-        get {
-            return _numberValue
         }
     }
     
