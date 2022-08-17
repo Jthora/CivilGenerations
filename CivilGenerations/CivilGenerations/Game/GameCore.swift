@@ -15,6 +15,7 @@ final class GameCore: ObservableObject {
         setup()
     }
     
+    
     @Published var generations:Int = 0
     @Published var gameSpeed: GameSpeed = .normal
     @Published var gameState: GameState = .paused
@@ -45,6 +46,7 @@ final class GameCore: ObservableObject {
     
     var updateIter:TimeInterval = 0
     
+    @Published var cameraNode = SKCameraNode()
     @Published var scene: GameScene = {
         let scene = GameScene()
         scene.size = CGSize(width: UIScreen.main.bounds.width,
@@ -73,18 +75,30 @@ final class GameCore: ObservableObject {
     }
     
     func setup() {
+        
+        // set initial states
         gameState = .paused
         generations = 0
+        
+        // pre-wipe
         lifeNodeField.clear()
         scene.removeAllChildren()
-        
         numberSpriteParent.removeAllChildren()
         iconSpriteParent.removeAllChildren()
+        numberSprites.removeAll()
+        iconSprites.removeAll()
         
+        // camera
+        cameraNode.position = CGPoint(x: scene.size.width / 2, y: scene.size.height / 2)
+        scene.addChild(cameraNode)
+        scene.camera = cameraNode
+        
+        // add sprite layers
         scene.addChild(numberSpriteParent)
         scene.addChild(iconSpriteParent)
         
-        iconMode = iconMode // Reset
+        // pre-affirm icon mode state
+        iconMode = iconMode
     }
     
     func click(_ point:CGPoint) {
