@@ -40,12 +40,19 @@ extension GameLifeSpriteNode {
         
         var emoji: String {
             switch self {
-                case .land: return ["🌲","🌴","🌳","🌱","🌾","🌵","🌿","🏔","⛰","🗻"].randomElement()! as String
-                case .farm: return ["🏗","⛺️","🏕","🛖","🚧","🛠","⚒️","🔨","⛏","🪓","🚜"].randomElement()! as String
-                case .home: return ["🏠","🏡","🏘"].randomElement()! as String
-                case .city: return ["🏢","🏬","🏣","🏤","🏥","🏦","🏨","🏪","🏫","🏩","💒","⛪️","🏭","🏛","🕍","🕌","🏟"].randomElement()! as String
-                case .ruin: return ["🏚","🔥","🌋","🌪","💥","💣","☠️","💀","👻","☢️","☣️","⚠️","🚨","🦖"].randomElement()! as String
+                case .land: return "🌳"
+                case .farm: return "🏕"
+                case .home: return "🏠"
+                case .city: return "🏢"
+                case .ruin: return "🔥"
             }
+//            switch self {
+//                case .land: return ["🌲","🌴","🌳","🌱","🌾","🌵","🌿","🏔","⛰","🗻"].randomElement()! as String
+//                case .farm: return ["🏗","⛺️","🏕","🛖","🚧","🛠","⚒️","🔨","⛏","🪓","🚜"].randomElement()! as String
+//                case .home: return ["🏠","🏡","🏘"].randomElement()! as String
+//                case .city: return ["🏢","🏬","🏣","🏤","🏥","🏦","🏨","🏪","🏫","🏩","💒","⛪️","🏭","🏛","🕍","🕌","🏟"].randomElement()! as String
+//                case .ruin: return ["🏚","🔥","🌋","🌪","💥","💣","☠️","💀","👻","☢️","☣️","⚠️","🚨","🦖"].randomElement()! as String
+//            }
         }
         
         var lifeNodeState: LifeNode.State {

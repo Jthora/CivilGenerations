@@ -17,8 +17,10 @@ class GameLifeSpriteNode: SKSpriteNode {
     var iconType:IconType {
         set {
             guard _iconType != newValue else {return}
+            _iconType = newValue
             guard let labelNode = self.labelNode else {
                 labelNode = iconType.labelNode
+                labelNode!.text = iconType.emoji
                 addChild(labelNode!)
                 return
             }

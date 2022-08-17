@@ -14,8 +14,8 @@ typealias NeighborCount = Int
 
 class LifeNodeField: ObservableObject {
     
-    @Published var field:[LifeNodeHash:LifeNode] = [:]
-    @Published var counts:[LifeNodeHash:NeighborCount] = [:]
+    var field:[LifeNodeHash:LifeNode] = [:]
+    var counts:[LifeNodeHash:NeighborCount] = [:]
     
     // increase count at LifeNode
     func inc(_ w: LifeNodeHash) {
@@ -52,6 +52,7 @@ class LifeNodeField: ObservableObject {
     }
     
     func set(_ w:LifeNode) {
+        print("set")
         inc(w.h-DX-DY)
         inc(w.h-DX)
         inc(w.h-DX+DY)
@@ -68,6 +69,7 @@ class LifeNodeField: ObservableObject {
     }
     
     func reset(_ w:LifeNode) {
+        print("reset")
         dec(w.h-DX-DY)
         dec(w.h-DX)
         dec(w.h-DX+DY)
