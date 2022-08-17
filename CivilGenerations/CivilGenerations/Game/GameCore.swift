@@ -30,10 +30,12 @@ final class GameCore: ObservableObject {
     
     
     func start() {
+        print("start")
         gameState = .running
     }
     
     func pause() {
+        print("pause")
         gameState = .paused
     }
     

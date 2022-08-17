@@ -25,7 +25,23 @@ struct ContentView: View {
                     .ignoresSafeArea()
             }
             Group {
-                
+                VStack {
+                    Spacer()
+                    
+                    Group{
+                        Button(action: {
+                            switch gameCore.gameState {
+                                case .paused: gameCore.start()
+                                case .running: gameCore.pause()
+                            }
+                        }, label: {
+                            Text("⏯")
+                                .frame(width: 40, height: 40)
+                                .font(.system(size: 40))
+                                .padding()
+                        })
+                    }.frame(maxHeight: .infinity, alignment: .bottom)
+                }
             }
         }
     }

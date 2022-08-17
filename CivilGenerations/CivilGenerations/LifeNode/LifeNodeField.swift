@@ -99,23 +99,23 @@ class LifeNodeField: ObservableObject {
     }
     
     func step() {
-        var toReset = [LifeNode]()
-        var toSet = [LifeNode]()
+        var toReset = [LifeNodeHash:LifeNode]()
+        var toSet = [LifeNodeHash:LifeNode]()
         
         for (_,w) in field {
             if let c = counts[w.h],
                c < 2 || c > 3 {
-                toReset[w.hashValue] = w
+                toReset[w.h] = w
             } else {
-                toSet[w.hashValue] = w
+                toSet[w.h] = w
             }
         }
         
-        for w in toReset {
+        for (_,w) in toReset {
             reset(w)
         }
         
-        for w in toSet {
+        for (_,w) in toSet {
             set(w)
         }
     }
