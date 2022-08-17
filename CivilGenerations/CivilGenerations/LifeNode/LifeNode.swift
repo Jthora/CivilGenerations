@@ -18,8 +18,8 @@ struct LifeNode
     var h: LifeNodeHash
     
     // Coordinates
-    var x: Int32 { return h.hi - OFFSET }
-    var y: Int32 { return h.lo - OFFSET }
+    var x: Int { return Int(h.hi) - Int(OFFSET) }
+    var y: Int { return Int(h.lo) - Int(OFFSET) }
     
     init(_ point:CGPoint)
     {
@@ -68,11 +68,17 @@ extension LifeNode: Hashable {
     }
 }
 
+let CONVERSION_SCALE:CGFloat = 32
+
 extension LifeNodeHash {
     init(_ point:CGPoint) {
-        self = Int64(hi: Int32(point.x) + OFFSET, lo: Int32(point.y) + OFFSET)
+        let x = Int(point.x / CONVERSION_SCALE)
+        let y = Int(point.y / CONVERSION_SCALE)
+        self = Int64(hi: Int32(x) + OFFSET, lo: Int32(y) + OFFSET)
     }
     var position:CGPoint {
-        return CGPoint(x: Int(hi - OFFSET), y: Int(lo - OFFSET))
+        let x = Int32(hi)// - Int32(OFFSET)
+        let y = Int32(lo)// - Int32(OFFSET)
+        return CGPoint(x: Int(x)*Int(CONVERSION_SCALE), y: Int(y)*Int(CONVERSION_SCALE))
     }
 }
