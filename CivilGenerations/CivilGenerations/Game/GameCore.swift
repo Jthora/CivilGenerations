@@ -84,9 +84,23 @@ final class GameCore: ObservableObject {
     }
     
     func updateSprites() {
+        var spritesToRemove:[LifeNodeHash] = []
+        
         for (h,sprite) in sprites {
-            guard let c = lifeNodeField.counts[h] else {return}
+            guard lifeNodeField.field[h] != nil else {
+                spritesToRemove.append(h)
+                continue
+            }
+            guard let c = lifeNodeField.counts[h] else {
+                print("Error: counts missing but field exists?")
+                continue
+            }
             sprite.iconType = GameLifeSpriteNode.IconType(c)
+        }
+        
+        for h in spritesToRemove {
+            sprites[h]?.removeFromParent()
+            sprites[h] = nil
         }
     }
 }
