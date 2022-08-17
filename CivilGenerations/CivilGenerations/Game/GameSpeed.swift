@@ -8,13 +8,13 @@
 import Foundation
 
 enum GameSpeed: Int {
-    case superSlow = 64
-    case verySlow = 32
-    case slow = 16
-    case normal = 8
-    case fast = 4
-    case veryFast = 2
-    case superFast = 1
+    case superSlow
+    case verySlow
+    case slow
+    case normal
+    case fast
+    case veryFast
+    case superFast
     
     var string: String {
         switch self {
@@ -25,6 +25,18 @@ enum GameSpeed: Int {
         case .fast: return "Fast"
         case .veryFast: return "Very Fast"
         case .superFast: return "Super Fast"
+        }
+    }
+    
+    var icon: String {
+        switch self {
+        case .superSlow: return "🐌"
+        case .verySlow: return "🐢"
+        case .slow: return "🐇"
+        case .normal: return "🚙"
+        case .fast: return "🏎"
+        case .veryFast: return "✈️"
+        case .superFast: return "🚀"
         }
     }
 }

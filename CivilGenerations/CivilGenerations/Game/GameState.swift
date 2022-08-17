@@ -17,4 +17,11 @@ enum GameState {
         case .running: return "Run"
         }
     }
+    
+    var icon: String {
+        switch self {
+        case .paused: return "⏸"
+        case .running: return "▶️"
+        }
+    }
 }

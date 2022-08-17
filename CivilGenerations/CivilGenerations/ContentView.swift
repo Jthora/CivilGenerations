@@ -29,17 +29,47 @@ struct ContentView: View {
                     Spacer()
                     
                     Group{
-                        Button(action: {
-                            switch gameCore.gameState {
-                                case .paused: gameCore.start()
-                                case .running: gameCore.pause()
+                        HStack {
+                            Group {
+                                HStack {
+                                    Button(action: {
+                                        gameCore.gameSpeed = GameSpeed(rawValue: gameCore.gameSpeed.rawValue - 1) ?? .superSlow
+                                    }, label: {
+                                        Text("➖")
+                                            .frame(width: 40, height: 40)
+                                            .font(.system(size: 36))
+                                    })
+                                    Text(gameCore.gameSpeed.icon)
+                                        .frame(width: 40, height: 40)
+                                        .font(.system(size: 36))
+                                    Button(action: {
+                                        gameCore.gameSpeed = GameSpeed(rawValue: gameCore.gameSpeed.rawValue + 1) ?? .superFast
+                                    }, label: {
+                                        Text("➕")
+                                            .frame(width: 40, height: 40)
+                                            .font(.system(size: 36))
+                                    })
+                                    Spacer()
+                                }
                             }
-                        }, label: {
-                            Text("⏯")
-                                .frame(width: 40, height: 40)
-                                .font(.system(size: 40))
-                                .padding()
-                        })
+                            Group {
+                                Button(action: {
+                                    switch gameCore.gameState {
+                                        case .paused: gameCore.start()
+                                        case .running: gameCore.pause()
+                                    }
+                                }, label: {
+                                    Text(gameCore.gameState.icon)
+                                        .frame(width: 40, height: 40)
+                                        .font(.system(size: 36))
+                                        .padding()
+                                })
+                            }
+                            Group {
+                                
+                            }
+                        }
+                        .background(.white)
                     }.frame(maxHeight: .infinity, alignment: .bottom)
                 }
             }

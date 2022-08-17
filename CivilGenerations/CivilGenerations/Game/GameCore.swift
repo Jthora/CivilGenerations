@@ -15,6 +15,7 @@ final class GameCore: ObservableObject {
         setup()
     }
     
+    @Published var gameSpeed: GameSpeed = .normal
     @Published var gameState: GameState = .paused
     @Published var sprites: [LifeNodeHash:GameLifeSpriteNode] = [:]
     @Published var ruins: [LifeNodeHash:GameLifeSpriteNode] = [:]
