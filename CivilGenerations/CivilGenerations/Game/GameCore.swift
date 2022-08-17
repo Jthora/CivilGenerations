@@ -79,8 +79,7 @@ final class GameCore: ObservableObject {
     
     func updateSprites() {
         for (h,sprite) in sprites {
-            guard let c = lifeNodeField.counts[h],
-                    sprite.iconType.rawValue != c  else {return}
+            guard let c = lifeNodeField.counts[h] else {return}
             sprite.iconType = GameLifeSpriteNode.IconType(c)
         }
     }
