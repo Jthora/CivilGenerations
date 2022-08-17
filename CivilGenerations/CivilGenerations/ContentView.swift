@@ -26,6 +26,16 @@ struct ContentView: View {
             }
             Group {
                 VStack {
+                    Group{
+                        HStack {
+                            Text("➰: \(gameCore.generations)")
+                                .frame(width: 100, height: 40, alignment: .leading)
+                                .font(.system(size: 16))
+                                .clipped()
+                            Spacer()
+                        }
+                        .background(.white)
+                    }.frame(maxHeight: .infinity, alignment: .top)
                     Spacer()
                     
                     Group{

@@ -15,6 +15,7 @@ final class GameCore: ObservableObject {
         setup()
     }
     
+    @Published var generations:Int = 0
     @Published var gameSpeed: GameSpeed = .normal
     @Published var gameState: GameState = .paused
     @Published var iconMode: GameIconMode = .icons {
@@ -65,6 +66,7 @@ final class GameCore: ObservableObject {
     func reset() {
         DispatchQueue.main.async {
             self.gameState = .paused
+            self.generations = 0
             self.lifeNodeField.clear()
             self.updateSprites()
         }
@@ -72,6 +74,7 @@ final class GameCore: ObservableObject {
     
     func setup() {
         gameState = .paused
+        generations = 0
         lifeNodeField.clear()
         scene.removeAllChildren()
         
@@ -135,12 +138,15 @@ final class GameCore: ObservableObject {
         
         // New Icon Sprites
         for (h,_) in lifeNodeField.field {
+            
             if iconSprites[h] != nil {
+                // update existing
                 guard let c = lifeNodeField.counts[h] else {
                     continue
                 }
                 iconSprites[h]?.iconType = GameLifeSpriteNode.IconType(c)
             } else {
+                // add new
                 guard let c = lifeNodeField.counts[h] else {
                     continue
                 }
@@ -199,6 +205,7 @@ extension GameCore: GameSceneDelegate {
                 updateIter += gameSpeed.updateRate
                 if updateIter >= 1 {
                     updateIter = 0
+                    generations += 1
                     lifeNodeField.step()
                     updateSprites()
                 }
