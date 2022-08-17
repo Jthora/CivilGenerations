@@ -46,9 +46,10 @@ struct ContentView: View {
                         HStack {
                             Group {
                                 VStack {
-                                    Text(gameCore.gameSpeed.string)
-                                        .frame(width: 100, height: 10, alignment: .center)
-                                        .font(.system(size: 12))
+                                    Group {
+                                        Text(gameCore.gameSpeed.string)
+                                            .font(.system(size: 12))
+                                    }.frame(maxWidth: .infinity, maxHeight: 10, alignment: .center)
                                     HStack {
                                         Button(action: {
                                             gameCore.gameSpeed = GameSpeed(rawValue: gameCore.gameSpeed.rawValue - 1) ?? .superSlow
@@ -57,11 +58,9 @@ struct ContentView: View {
                                                 .frame(width: 30, height: 30)
                                                 .font(.system(size: 30))
                                         })
-                                        VStack {
-                                            Text(gameCore.gameSpeed.icon)
-                                                .frame(width: 32, height: 30)
-                                                .font(.system(size: 30))
-                                        }
+                                        Text(gameCore.gameSpeed.icon)
+                                            .frame(width: 32, height: 30)
+                                            .font(.system(size: 30))
                                         Button(action: {
                                             gameCore.gameSpeed = GameSpeed(rawValue: gameCore.gameSpeed.rawValue + 1) ?? .superFast
                                         }, label: {
@@ -69,11 +68,10 @@ struct ContentView: View {
                                                 .frame(width: 30, height: 30)
                                                 .font(.system(size: 30))
                                         })
-                                        Spacer()
                                     }
                                 }
-                                
-                            }
+                            }.frame(alignment: .leading)
+                            Spacer()
                             Group {
                                 HStack {
                                     Button(action: {

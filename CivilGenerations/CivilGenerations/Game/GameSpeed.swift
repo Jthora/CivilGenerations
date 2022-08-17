@@ -21,7 +21,7 @@ enum GameSpeed: Int {
         case .superSlow: return "Super Slow"
         case .verySlow: return "Very Slow"
         case .slow: return "Slow"
-        case .normal: return "Normal"
+        case .normal: return "Normal Speed"
         case .fast: return "Fast"
         case .veryFast: return "Very Fast"
         case .superFast: return "Super Fast"
