@@ -80,6 +80,7 @@ final class GameCore: ObservableObject {
             }
         }
         print("Nodes: \(lifeNodeField.field.count)")
+        print("Count: \(lifeNodeField.counts.count)")
         updateSprites()
     }
     
@@ -92,7 +93,6 @@ final class GameCore: ObservableObject {
                 continue
             }
             guard let c = lifeNodeField.counts[h] else {
-                print("Error: counts missing but field exists?")
                 continue
             }
             sprite.iconType = GameLifeSpriteNode.IconType(c)

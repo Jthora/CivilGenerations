@@ -9,6 +9,7 @@ import UIKit
 
 
 let OFFSET:Int32 = Int32(bitPattern: 0x80000000)
+let CONVERSION_SCALE:CGFloat = 32
 
 typealias LifeNodeHash = Int64
 
@@ -49,6 +50,9 @@ struct LifeNode
     var point:CGPoint {
         return CGPoint(x: Int(x), y: Int(y))
     }
+    var gridPointString:String {
+        return "(\(Int(CGFloat(x)/CONVERSION_SCALE)),\(Int(CGFloat(y)/CONVERSION_SCALE)))"
+    }
 }
 
 extension LifeNode: Equatable {
@@ -68,7 +72,6 @@ extension LifeNode: Hashable {
     }
 }
 
-let CONVERSION_SCALE:CGFloat = 32
 
 extension LifeNodeHash {
     init(_ point:CGPoint) {

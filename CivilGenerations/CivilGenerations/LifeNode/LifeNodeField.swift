@@ -18,18 +18,27 @@ class LifeNodeField: ObservableObject {
     var counts:[LifeNodeHash:NeighborCount] = [:]
     
     // increase count at LifeNode
-    func inc(_ w: LifeNodeHash) {
-        let c = counts[w]
-        counts[w] = c == nil ? 1 : c! + 1
+    func inc(_ h: LifeNodeHash) {
+        let c = counts[h]
+        counts[h] = c == nil ? 1 : c! + 1
+        print("inc: [\(h):\(counts[h]!)]")
     }
     
     // decrease count at LifeNode
-    func dec(_ w: LifeNodeHash) {
-        guard let c = counts[w] else {return}
+    func dec(_ h: LifeNodeHash) {
+        print("dec: count: \(counts.count)")
+        guard let c = counts[h] else {
+            print("dec: count not found")
+            return
+        }
         if c != 0 {
-            counts[w] = c-1
-        } else {
-            counts.removeValue(forKey: w)
+            print("dec: dec [\(h):\(counts[h]!)]")
+            counts[h] = c-1
+        }
+        print("dec: count inc: [\(h):\(counts[h]!)]")
+        if counts[h]! <= 0 {
+            print("dec: remove")
+            counts.removeValue(forKey: h)
         }
     }
     
@@ -99,14 +108,17 @@ class LifeNodeField: ObservableObject {
     }
     
     func step() {
+        print("step")
         var toReset = [LifeNodeHash:LifeNode]()
         var toSet = [LifeNodeHash:LifeNode]()
         
         for (_,w) in field {
             if let c = counts[w.h],
-               c < 2 || c > 3 {
+               c < 2 || 3 < c {
+                print("toReset: \(w.gridPointString)")
                 toReset[w.h] = w
             } else {
+                print("toSet: \(w.gridPointString)")
                 toSet[w.h] = w
             }
         }
