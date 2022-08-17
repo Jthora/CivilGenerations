@@ -7,79 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA12ADBD28AC2F680070A915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADBC28AC2F680070A915 /* AppDelegate.swift */; };
-		FA12ADBF28AC2F680070A915 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA12ADBE28AC2F680070A915 /* GameScene.sks */; };
-		FA12ADC128AC2F680070A915 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA12ADC028AC2F680070A915 /* Actions.sks */; };
-		FA12ADC328AC2F680070A915 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADC228AC2F680070A915 /* GameScene.swift */; };
-		FA12ADC528AC2F680070A915 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADC428AC2F680070A915 /* GameViewController.swift */; };
-		FA12ADC828AC2F680070A915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA12ADC628AC2F680070A915 /* Main.storyboard */; };
-		FA12ADCA28AC2F6C0070A915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA12ADC928AC2F6C0070A915 /* Assets.xcassets */; };
-		FA12ADCD28AC2F6C0070A915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA12ADCB28AC2F6C0070A915 /* LaunchScreen.storyboard */; };
-		FA12ADD728AC2F6D0070A915 /* CivilGenerationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADD628AC2F6D0070A915 /* CivilGenerationsTests.swift */; };
-		FA12ADE128AC2F6D0070A915 /* CivilGenerationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADE028AC2F6D0070A915 /* CivilGenerationsUITests.swift */; };
-		FA12ADE328AC2F6D0070A915 /* CivilGenerationsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADE228AC2F6D0070A915 /* CivilGenerationsUITestsLaunchTests.swift */; };
-		FA12ADF128AC3FB10070A915 /* LifeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADF028AC3FB00070A915 /* LifeNode.swift */; };
-		FA12ADF328AC43350070A915 /* LifeNodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADF228AC43350070A915 /* LifeNodeField.swift */; };
-		FA12ADF528AC48B50070A915 /* TimeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADF428AC48B50070A915 /* TimeCore.swift */; };
-		FA12ADF928AC6DE10070A915 /* BitMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADF828AC6DE10070A915 /* BitMath.swift */; };
-		FA12ADFB28AC88090070A915 /* BitMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12ADFA28AC88090070A915 /* BitMathTests.swift */; };
+		FA12AE0C28ACAD0F0070A915 /* CivilGenerationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE0B28ACAD0F0070A915 /* CivilGenerationsApp.swift */; };
+		FA12AE0E28ACAD0F0070A915 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE0D28ACAD0F0070A915 /* ContentView.swift */; };
+		FA12AE1028ACAD120070A915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA12AE0F28ACAD120070A915 /* Assets.xcassets */; };
+		FA12AE1328ACAD120070A915 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA12AE1228ACAD120070A915 /* Preview Assets.xcassets */; };
+		FA12AE1528ACAD120070A915 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE1428ACAD120070A915 /* Persistence.swift */; };
+		FA12AE1828ACAD120070A915 /* CivilGenerations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE1628ACAD120070A915 /* CivilGenerations.xcdatamodeld */; };
+		FA12AE2228ACAD130070A915 /* CivilGenerationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE2128ACAD130070A915 /* CivilGenerationsTests.swift */; };
+		FA12AE2C28ACAD130070A915 /* CivilGenerationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE2B28ACAD130070A915 /* CivilGenerationsUITests.swift */; };
+		FA12AE2E28ACAD130070A915 /* CivilGenerationsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE2D28ACAD130070A915 /* CivilGenerationsUITestsLaunchTests.swift */; };
+		FA12AE4028ACAD380070A915 /* LifeNodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE3B28ACAD380070A915 /* LifeNodeField.swift */; };
+		FA12AE4328ACAD380070A915 /* BitMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE3E28ACAD380070A915 /* BitMath.swift */; };
+		FA12AE4428ACAD380070A915 /* LifeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE3F28ACAD380070A915 /* LifeNode.swift */; };
+		FA12AE4628ACAD510070A915 /* BitMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE4528ACAD510070A915 /* BitMathTests.swift */; };
+		FA12AE4828ACB0090070A915 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12AE4728ACB0090070A915 /* GameScene.swift */; };
+		FA45AB6528ACB26F00D454A8 /* GameCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6428ACB26F00D454A8 /* GameCore.swift */; };
+		FA45AB6828ACBA8300D454A8 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6728ACBA8300D454A8 /* GameState.swift */; };
+		FA45AB6A28ACBE9E00D454A8 /* GameSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6928ACBE9E00D454A8 /* GameSpeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA12ADD328AC2F6C0070A915 /* PBXContainerItemProxy */ = {
+		FA12AE1E28ACAD130070A915 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA12ADB128AC2F680070A915 /* Project object */;
+			containerPortal = FA12AE0028ACAD0F0070A915 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FA12ADB828AC2F680070A915;
+			remoteGlobalIDString = FA12AE0728ACAD0F0070A915;
 			remoteInfo = CivilGenerations;
 		};
-		FA12ADDD28AC2F6D0070A915 /* PBXContainerItemProxy */ = {
+		FA12AE2828ACAD130070A915 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA12ADB128AC2F680070A915 /* Project object */;
+			containerPortal = FA12AE0028ACAD0F0070A915 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FA12ADB828AC2F680070A915;
+			remoteGlobalIDString = FA12AE0728ACAD0F0070A915;
 			remoteInfo = CivilGenerations;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA12ADB928AC2F680070A915 /* CivilGenerations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CivilGenerations.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA12ADBC28AC2F680070A915 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA12ADBE28AC2F680070A915 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		FA12ADC028AC2F680070A915 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		FA12ADC228AC2F680070A915 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		FA12ADC428AC2F680070A915 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		FA12ADC728AC2F680070A915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FA12ADC928AC2F6C0070A915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA12ADCC28AC2F6C0070A915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FA12ADD228AC2F6C0070A915 /* CivilGenerationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CivilGenerationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA12ADD628AC2F6D0070A915 /* CivilGenerationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilGenerationsTests.swift; sourceTree = "<group>"; };
-		FA12ADDC28AC2F6D0070A915 /* CivilGenerationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CivilGenerationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA12ADE028AC2F6D0070A915 /* CivilGenerationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilGenerationsUITests.swift; sourceTree = "<group>"; };
-		FA12ADE228AC2F6D0070A915 /* CivilGenerationsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilGenerationsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FA12ADF028AC3FB00070A915 /* LifeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeNode.swift; sourceTree = "<group>"; };
-		FA12ADF228AC43350070A915 /* LifeNodeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeNodeField.swift; sourceTree = "<group>"; };
-		FA12ADF428AC48B50070A915 /* TimeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCore.swift; sourceTree = "<group>"; };
-		FA12ADF828AC6DE10070A915 /* BitMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMath.swift; sourceTree = "<group>"; };
-		FA12ADFA28AC88090070A915 /* BitMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMathTests.swift; sourceTree = "<group>"; };
+		FA12AE0828ACAD0F0070A915 /* CivilGenerations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CivilGenerations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA12AE0B28ACAD0F0070A915 /* CivilGenerationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilGenerationsApp.swift; sourceTree = "<group>"; };
+		FA12AE0D28ACAD0F0070A915 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA12AE0F28ACAD120070A915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA12AE1228ACAD120070A915 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA12AE1428ACAD120070A915 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		FA12AE1728ACAD120070A915 /* CivilGenerations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CivilGenerations.xcdatamodel; sourceTree = "<group>"; };
+		FA12AE1D28ACAD130070A915 /* CivilGenerationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CivilGenerationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA12AE2128ACAD130070A915 /* CivilGenerationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilGenerationsTests.swift; sourceTree = "<group>"; };
+		FA12AE2728ACAD130070A915 /* CivilGenerationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CivilGenerationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA12AE2B28ACAD130070A915 /* CivilGenerationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilGenerationsUITests.swift; sourceTree = "<group>"; };
+		FA12AE2D28ACAD130070A915 /* CivilGenerationsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivilGenerationsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA12AE3B28ACAD380070A915 /* LifeNodeField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeNodeField.swift; sourceTree = "<group>"; };
+		FA12AE3E28ACAD380070A915 /* BitMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitMath.swift; sourceTree = "<group>"; };
+		FA12AE3F28ACAD380070A915 /* LifeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeNode.swift; sourceTree = "<group>"; };
+		FA12AE4528ACAD510070A915 /* BitMathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitMathTests.swift; sourceTree = "<group>"; };
+		FA12AE4728ACB0090070A915 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		FA45AB6428ACB26F00D454A8 /* GameCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCore.swift; sourceTree = "<group>"; };
+		FA45AB6728ACBA8300D454A8 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		FA45AB6928ACBE9E00D454A8 /* GameSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSpeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FA12ADB628AC2F680070A915 /* Frameworks */ = {
+		FA12AE0528ACAD0F0070A915 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA12ADCF28AC2F6C0070A915 /* Frameworks */ = {
+		FA12AE1A28ACAD130070A915 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA12ADD928AC2F6D0070A915 /* Frameworks */ = {
+		FA12AE2428ACAD130070A915 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -89,81 +91,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA12ADB028AC2F680070A915 = {
+		FA12ADFF28ACAD0F0070A915 = {
 			isa = PBXGroup;
 			children = (
-				FA12ADBB28AC2F680070A915 /* CivilGenerations */,
-				FA12ADD528AC2F6D0070A915 /* CivilGenerationsTests */,
-				FA12ADDF28AC2F6D0070A915 /* CivilGenerationsUITests */,
-				FA12ADBA28AC2F680070A915 /* Products */,
+				FA12AE0A28ACAD0F0070A915 /* CivilGenerations */,
+				FA12AE2028ACAD130070A915 /* CivilGenerationsTests */,
+				FA12AE2A28ACAD130070A915 /* CivilGenerationsUITests */,
+				FA12AE0928ACAD0F0070A915 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FA12ADBA28AC2F680070A915 /* Products */ = {
+		FA12AE0928ACAD0F0070A915 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA12ADB928AC2F680070A915 /* CivilGenerations.app */,
-				FA12ADD228AC2F6C0070A915 /* CivilGenerationsTests.xctest */,
-				FA12ADDC28AC2F6D0070A915 /* CivilGenerationsUITests.xctest */,
+				FA12AE0828ACAD0F0070A915 /* CivilGenerations.app */,
+				FA12AE1D28ACAD130070A915 /* CivilGenerationsTests.xctest */,
+				FA12AE2728ACAD130070A915 /* CivilGenerationsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA12ADBB28AC2F680070A915 /* CivilGenerations */ = {
+		FA12AE0A28ACAD0F0070A915 /* CivilGenerations */ = {
 			isa = PBXGroup;
 			children = (
-				FA12ADEF28AC3F830070A915 /* Objects */,
-				FA12ADBC28AC2F680070A915 /* AppDelegate.swift */,
-				FA12ADBE28AC2F680070A915 /* GameScene.sks */,
-				FA12ADC028AC2F680070A915 /* Actions.sks */,
-				FA12ADC228AC2F680070A915 /* GameScene.swift */,
-				FA12ADC428AC2F680070A915 /* GameViewController.swift */,
-				FA12ADC628AC2F680070A915 /* Main.storyboard */,
-				FA12ADC928AC2F6C0070A915 /* Assets.xcassets */,
-				FA12ADCB28AC2F6C0070A915 /* LaunchScreen.storyboard */,
+				FA45AB6628ACB27400D454A8 /* Game */,
+				FA12AE3A28ACAD380070A915 /* LifeNode */,
+				FA12AE0B28ACAD0F0070A915 /* CivilGenerationsApp.swift */,
+				FA12AE3E28ACAD380070A915 /* BitMath.swift */,
+				FA12AE0D28ACAD0F0070A915 /* ContentView.swift */,
+				FA12AE0F28ACAD120070A915 /* Assets.xcassets */,
+				FA12AE1428ACAD120070A915 /* Persistence.swift */,
+				FA12AE1628ACAD120070A915 /* CivilGenerations.xcdatamodeld */,
+				FA12AE1128ACAD120070A915 /* Preview Content */,
 			);
 			path = CivilGenerations;
 			sourceTree = "<group>";
 		};
-		FA12ADD528AC2F6D0070A915 /* CivilGenerationsTests */ = {
+		FA12AE1128ACAD120070A915 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				FA12ADD628AC2F6D0070A915 /* CivilGenerationsTests.swift */,
-				FA12ADFA28AC88090070A915 /* BitMathTests.swift */,
+				FA12AE1228ACAD120070A915 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA12AE2028ACAD130070A915 /* CivilGenerationsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA12AE4528ACAD510070A915 /* BitMathTests.swift */,
+				FA12AE2128ACAD130070A915 /* CivilGenerationsTests.swift */,
 			);
 			path = CivilGenerationsTests;
 			sourceTree = "<group>";
 		};
-		FA12ADDF28AC2F6D0070A915 /* CivilGenerationsUITests */ = {
+		FA12AE2A28ACAD130070A915 /* CivilGenerationsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				FA12ADE028AC2F6D0070A915 /* CivilGenerationsUITests.swift */,
-				FA12ADE228AC2F6D0070A915 /* CivilGenerationsUITestsLaunchTests.swift */,
+				FA12AE2B28ACAD130070A915 /* CivilGenerationsUITests.swift */,
+				FA12AE2D28ACAD130070A915 /* CivilGenerationsUITestsLaunchTests.swift */,
 			);
 			path = CivilGenerationsUITests;
 			sourceTree = "<group>";
 		};
-		FA12ADEF28AC3F830070A915 /* Objects */ = {
+		FA12AE3A28ACAD380070A915 /* LifeNode */ = {
 			isa = PBXGroup;
 			children = (
-				FA12ADF028AC3FB00070A915 /* LifeNode.swift */,
-				FA12ADF228AC43350070A915 /* LifeNodeField.swift */,
-				FA12ADF428AC48B50070A915 /* TimeCore.swift */,
-				FA12ADF828AC6DE10070A915 /* BitMath.swift */,
+				FA12AE3F28ACAD380070A915 /* LifeNode.swift */,
+				FA12AE3B28ACAD380070A915 /* LifeNodeField.swift */,
 			);
-			path = Objects;
+			path = LifeNode;
+			sourceTree = "<group>";
+		};
+		FA45AB6628ACB27400D454A8 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				FA12AE4728ACB0090070A915 /* GameScene.swift */,
+				FA45AB6428ACB26F00D454A8 /* GameCore.swift */,
+				FA45AB6728ACBA8300D454A8 /* GameState.swift */,
+				FA45AB6928ACBE9E00D454A8 /* GameSpeed.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA12ADB828AC2F680070A915 /* CivilGenerations */ = {
+		FA12AE0728ACAD0F0070A915 /* CivilGenerations */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA12ADE628AC2F6D0070A915 /* Build configuration list for PBXNativeTarget "CivilGenerations" */;
+			buildConfigurationList = FA12AE3128ACAD130070A915 /* Build configuration list for PBXNativeTarget "CivilGenerations" */;
 			buildPhases = (
-				FA12ADB528AC2F680070A915 /* Sources */,
-				FA12ADB628AC2F680070A915 /* Frameworks */,
-				FA12ADB728AC2F680070A915 /* Resources */,
+				FA12AE0428ACAD0F0070A915 /* Sources */,
+				FA12AE0528ACAD0F0070A915 /* Frameworks */,
+				FA12AE0628ACAD0F0070A915 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -171,69 +190,69 @@
 			);
 			name = CivilGenerations;
 			productName = CivilGenerations;
-			productReference = FA12ADB928AC2F680070A915 /* CivilGenerations.app */;
+			productReference = FA12AE0828ACAD0F0070A915 /* CivilGenerations.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FA12ADD128AC2F6C0070A915 /* CivilGenerationsTests */ = {
+		FA12AE1C28ACAD130070A915 /* CivilGenerationsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA12ADE928AC2F6D0070A915 /* Build configuration list for PBXNativeTarget "CivilGenerationsTests" */;
+			buildConfigurationList = FA12AE3428ACAD130070A915 /* Build configuration list for PBXNativeTarget "CivilGenerationsTests" */;
 			buildPhases = (
-				FA12ADCE28AC2F6C0070A915 /* Sources */,
-				FA12ADCF28AC2F6C0070A915 /* Frameworks */,
-				FA12ADD028AC2F6C0070A915 /* Resources */,
+				FA12AE1928ACAD130070A915 /* Sources */,
+				FA12AE1A28ACAD130070A915 /* Frameworks */,
+				FA12AE1B28ACAD130070A915 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FA12ADD428AC2F6C0070A915 /* PBXTargetDependency */,
+				FA12AE1F28ACAD130070A915 /* PBXTargetDependency */,
 			);
 			name = CivilGenerationsTests;
 			productName = CivilGenerationsTests;
-			productReference = FA12ADD228AC2F6C0070A915 /* CivilGenerationsTests.xctest */;
+			productReference = FA12AE1D28ACAD130070A915 /* CivilGenerationsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FA12ADDB28AC2F6D0070A915 /* CivilGenerationsUITests */ = {
+		FA12AE2628ACAD130070A915 /* CivilGenerationsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA12ADEC28AC2F6D0070A915 /* Build configuration list for PBXNativeTarget "CivilGenerationsUITests" */;
+			buildConfigurationList = FA12AE3728ACAD130070A915 /* Build configuration list for PBXNativeTarget "CivilGenerationsUITests" */;
 			buildPhases = (
-				FA12ADD828AC2F6D0070A915 /* Sources */,
-				FA12ADD928AC2F6D0070A915 /* Frameworks */,
-				FA12ADDA28AC2F6D0070A915 /* Resources */,
+				FA12AE2328ACAD130070A915 /* Sources */,
+				FA12AE2428ACAD130070A915 /* Frameworks */,
+				FA12AE2528ACAD130070A915 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FA12ADDE28AC2F6D0070A915 /* PBXTargetDependency */,
+				FA12AE2928ACAD130070A915 /* PBXTargetDependency */,
 			);
 			name = CivilGenerationsUITests;
 			productName = CivilGenerationsUITests;
-			productReference = FA12ADDC28AC2F6D0070A915 /* CivilGenerationsUITests.xctest */;
+			productReference = FA12AE2728ACAD130070A915 /* CivilGenerationsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FA12ADB128AC2F680070A915 /* Project object */ = {
+		FA12AE0028ACAD0F0070A915 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					FA12ADB828AC2F680070A915 = {
+					FA12AE0728ACAD0F0070A915 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
-					FA12ADD128AC2F6C0070A915 = {
+					FA12AE1C28ACAD130070A915 = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = FA12ADB828AC2F680070A915;
+						TestTargetID = FA12AE0728ACAD0F0070A915;
 					};
-					FA12ADDB28AC2F6D0070A915 = {
+					FA12AE2628ACAD130070A915 = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = FA12ADB828AC2F680070A915;
+						TestTargetID = FA12AE0728ACAD0F0070A915;
 					};
 				};
 			};
-			buildConfigurationList = FA12ADB428AC2F680070A915 /* Build configuration list for PBXProject "CivilGenerations" */;
+			buildConfigurationList = FA12AE0328ACAD0F0070A915 /* Build configuration list for PBXProject "CivilGenerations" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -241,39 +260,36 @@
 				en,
 				Base,
 			);
-			mainGroup = FA12ADB028AC2F680070A915;
-			productRefGroup = FA12ADBA28AC2F680070A915 /* Products */;
+			mainGroup = FA12ADFF28ACAD0F0070A915;
+			productRefGroup = FA12AE0928ACAD0F0070A915 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA12ADB828AC2F680070A915 /* CivilGenerations */,
-				FA12ADD128AC2F6C0070A915 /* CivilGenerationsTests */,
-				FA12ADDB28AC2F6D0070A915 /* CivilGenerationsUITests */,
+				FA12AE0728ACAD0F0070A915 /* CivilGenerations */,
+				FA12AE1C28ACAD130070A915 /* CivilGenerationsTests */,
+				FA12AE2628ACAD130070A915 /* CivilGenerationsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FA12ADB728AC2F680070A915 /* Resources */ = {
+		FA12AE0628ACAD0F0070A915 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA12ADC828AC2F680070A915 /* Main.storyboard in Resources */,
-				FA12ADBF28AC2F680070A915 /* GameScene.sks in Resources */,
-				FA12ADCA28AC2F6C0070A915 /* Assets.xcassets in Resources */,
-				FA12ADCD28AC2F6C0070A915 /* LaunchScreen.storyboard in Resources */,
-				FA12ADC128AC2F680070A915 /* Actions.sks in Resources */,
+				FA12AE1328ACAD120070A915 /* Preview Assets.xcassets in Resources */,
+				FA12AE1028ACAD120070A915 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA12ADD028AC2F6C0070A915 /* Resources */ = {
+		FA12AE1B28ACAD130070A915 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA12ADDA28AC2F6D0070A915 /* Resources */ = {
+		FA12AE2528ACAD130070A915 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,74 +299,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FA12ADB528AC2F680070A915 /* Sources */ = {
+		FA12AE0428ACAD0F0070A915 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA12ADC328AC2F680070A915 /* GameScene.swift in Sources */,
-				FA12ADC528AC2F680070A915 /* GameViewController.swift in Sources */,
-				FA12ADF128AC3FB10070A915 /* LifeNode.swift in Sources */,
-				FA12ADBD28AC2F680070A915 /* AppDelegate.swift in Sources */,
-				FA12ADF928AC6DE10070A915 /* BitMath.swift in Sources */,
-				FA12ADF328AC43350070A915 /* LifeNodeField.swift in Sources */,
-				FA12ADF528AC48B50070A915 /* TimeCore.swift in Sources */,
+				FA12AE4828ACB0090070A915 /* GameScene.swift in Sources */,
+				FA12AE4328ACAD380070A915 /* BitMath.swift in Sources */,
+				FA12AE4028ACAD380070A915 /* LifeNodeField.swift in Sources */,
+				FA12AE4428ACAD380070A915 /* LifeNode.swift in Sources */,
+				FA12AE1528ACAD120070A915 /* Persistence.swift in Sources */,
+				FA12AE0E28ACAD0F0070A915 /* ContentView.swift in Sources */,
+				FA45AB6528ACB26F00D454A8 /* GameCore.swift in Sources */,
+				FA45AB6828ACBA8300D454A8 /* GameState.swift in Sources */,
+				FA45AB6A28ACBE9E00D454A8 /* GameSpeed.swift in Sources */,
+				FA12AE0C28ACAD0F0070A915 /* CivilGenerationsApp.swift in Sources */,
+				FA12AE1828ACAD120070A915 /* CivilGenerations.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA12ADCE28AC2F6C0070A915 /* Sources */ = {
+		FA12AE1928ACAD130070A915 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA12ADD728AC2F6D0070A915 /* CivilGenerationsTests.swift in Sources */,
-				FA12ADFB28AC88090070A915 /* BitMathTests.swift in Sources */,
+				FA12AE2228ACAD130070A915 /* CivilGenerationsTests.swift in Sources */,
+				FA12AE4628ACAD510070A915 /* BitMathTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA12ADD828AC2F6D0070A915 /* Sources */ = {
+		FA12AE2328ACAD130070A915 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA12ADE328AC2F6D0070A915 /* CivilGenerationsUITestsLaunchTests.swift in Sources */,
-				FA12ADE128AC2F6D0070A915 /* CivilGenerationsUITests.swift in Sources */,
+				FA12AE2E28ACAD130070A915 /* CivilGenerationsUITestsLaunchTests.swift in Sources */,
+				FA12AE2C28ACAD130070A915 /* CivilGenerationsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FA12ADD428AC2F6C0070A915 /* PBXTargetDependency */ = {
+		FA12AE1F28ACAD130070A915 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FA12ADB828AC2F680070A915 /* CivilGenerations */;
-			targetProxy = FA12ADD328AC2F6C0070A915 /* PBXContainerItemProxy */;
+			target = FA12AE0728ACAD0F0070A915 /* CivilGenerations */;
+			targetProxy = FA12AE1E28ACAD130070A915 /* PBXContainerItemProxy */;
 		};
-		FA12ADDE28AC2F6D0070A915 /* PBXTargetDependency */ = {
+		FA12AE2928ACAD130070A915 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FA12ADB828AC2F680070A915 /* CivilGenerations */;
-			targetProxy = FA12ADDD28AC2F6D0070A915 /* PBXContainerItemProxy */;
+			target = FA12AE0728ACAD0F0070A915 /* CivilGenerations */;
+			targetProxy = FA12AE2828ACAD130070A915 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		FA12ADC628AC2F680070A915 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA12ADC728AC2F680070A915 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FA12ADCB28AC2F6C0070A915 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA12ADCC28AC2F6C0070A915 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		FA12ADE428AC2F6D0070A915 /* Debug */ = {
+		FA12AE2F28ACAD130070A915 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -410,7 +411,7 @@
 			};
 			name = Debug;
 		};
-		FA12ADE528AC2F6D0070A915 /* Release */ = {
+		FA12AE3028ACAD130070A915 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -464,19 +465,20 @@
 			};
 			name = Release;
 		};
-		FA12ADE728AC2F6D0070A915 /* Debug */ = {
+		FA12AE3228ACAD130070A915 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CivilGenerations/Preview Content\"";
 				DEVELOPMENT_TEAM = H4H7UN3F3K;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -492,19 +494,20 @@
 			};
 			name = Debug;
 		};
-		FA12ADE828AC2F6D0070A915 /* Release */ = {
+		FA12AE3328ACAD130070A915 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CivilGenerations/Preview Content\"";
 				DEVELOPMENT_TEAM = H4H7UN3F3K;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -520,7 +523,7 @@
 			};
 			name = Release;
 		};
-		FA12ADEA28AC2F6D0070A915 /* Debug */ = {
+		FA12AE3528ACAD130070A915 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -540,7 +543,7 @@
 			};
 			name = Debug;
 		};
-		FA12ADEB28AC2F6D0070A915 /* Release */ = {
+		FA12AE3628ACAD130070A915 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -560,7 +563,7 @@
 			};
 			name = Release;
 		};
-		FA12ADED28AC2F6D0070A915 /* Debug */ = {
+		FA12AE3828ACAD130070A915 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -578,7 +581,7 @@
 			};
 			name = Debug;
 		};
-		FA12ADEE28AC2F6D0070A915 /* Release */ = {
+		FA12AE3928ACAD130070A915 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -599,43 +602,56 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA12ADB428AC2F680070A915 /* Build configuration list for PBXProject "CivilGenerations" */ = {
+		FA12AE0328ACAD0F0070A915 /* Build configuration list for PBXProject "CivilGenerations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA12ADE428AC2F6D0070A915 /* Debug */,
-				FA12ADE528AC2F6D0070A915 /* Release */,
+				FA12AE2F28ACAD130070A915 /* Debug */,
+				FA12AE3028ACAD130070A915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA12ADE628AC2F6D0070A915 /* Build configuration list for PBXNativeTarget "CivilGenerations" */ = {
+		FA12AE3128ACAD130070A915 /* Build configuration list for PBXNativeTarget "CivilGenerations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA12ADE728AC2F6D0070A915 /* Debug */,
-				FA12ADE828AC2F6D0070A915 /* Release */,
+				FA12AE3228ACAD130070A915 /* Debug */,
+				FA12AE3328ACAD130070A915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA12ADE928AC2F6D0070A915 /* Build configuration list for PBXNativeTarget "CivilGenerationsTests" */ = {
+		FA12AE3428ACAD130070A915 /* Build configuration list for PBXNativeTarget "CivilGenerationsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA12ADEA28AC2F6D0070A915 /* Debug */,
-				FA12ADEB28AC2F6D0070A915 /* Release */,
+				FA12AE3528ACAD130070A915 /* Debug */,
+				FA12AE3628ACAD130070A915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA12ADEC28AC2F6D0070A915 /* Build configuration list for PBXNativeTarget "CivilGenerationsUITests" */ = {
+		FA12AE3728ACAD130070A915 /* Build configuration list for PBXNativeTarget "CivilGenerationsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA12ADED28AC2F6D0070A915 /* Debug */,
-				FA12ADEE28AC2F6D0070A915 /* Release */,
+				FA12AE3828ACAD130070A915 /* Debug */,
+				FA12AE3928ACAD130070A915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA12AE1628ACAD120070A915 /* CivilGenerations.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA12AE1728ACAD120070A915 /* CivilGenerations.xcdatamodel */,
+			);
+			currentVersion = FA12AE1728ACAD120070A915 /* CivilGenerations.xcdatamodel */;
+			path = CivilGenerations.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = FA12ADB128AC2F680070A915 /* Project object */;
+	rootObject = FA12AE0028ACAD0F0070A915 /* Project object */;
 }

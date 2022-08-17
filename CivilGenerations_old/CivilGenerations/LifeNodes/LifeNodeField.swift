@@ -7,6 +7,8 @@
 
 import UIKit
 
+let DX:Int64 = 0x100000000
+let DY:Int64 = 1
 
 typealias NeighborCount = Int
 
@@ -19,33 +21,46 @@ final class LifeNodeField {
     var counts:[LifeNodeHash:NeighborCount] = [:]
     
     // increase count at LifeNode
-    func inc(_ w: LifeNode) {
-        let c = counts[w.hashValue]
-        counts[w.hashValue] = c == nil ? 1 : c! + 1
+    func inc(_ w: LifeNodeHash) {
+        let c = counts[w]
+        counts[w] = c == nil ? 1 : c! + 1
     }
     
     // decrease count at LifeNode
-    func dec(_ w: LifeNode) {
-        guard let c = counts[w.hashValue] else {return}
+    func dec(_ w: LifeNodeHash) {
+        guard let c = counts[w] else {return}
         if c != 0 {
-            counts[w.hashValue] = c-1
+            counts[w] = c-1
         } else {
-            counts.removeValue(forKey: w.hashValue)
+            counts.removeValue(forKey: w)
         }
     }
     
+//    func set(_ w:LifeNode) {
+//        for p in w.neighbours {
+//            inc(p.h)
+//        }
+//        field[w.h] = w
+//    }
+    
     func set(_ w:LifeNode) {
-        for p in w.neighbours {
-            inc(p)
-        }
-        field[w.hashValue] = w
+        inc(w.h-DX-DY)
+        inc(w.h-DX)
+        inc(w.h-DX+DY)
+        inc(w.h-DY)
+        inc(w.h+DY)
+        inc(w.h+DX-DY)
+        inc(w.h+DX)
+        inc(w.h+DX+DY)
+        field[w.h] = w
     }
+    
     
     func reset(_ w:LifeNode) {
         for p in w.neighbours {
-            inc(p)
+            inc(p.h)
         }
-        field.removeValue(forKey: w.hashValue)
+        field.removeValue(forKey: w.h)
     }
     
     func step() {
@@ -53,7 +68,7 @@ final class LifeNodeField {
         var toSet = [LifeNode]()
         
         for (_,w) in field {
-            if let c = counts[w.hashValue],
+            if let c = counts[w.h],
                c < 2 || c > 3 {
                 toReset[w.hashValue] = w
             } else {
