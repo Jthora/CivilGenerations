@@ -27,6 +27,7 @@
 		FA45AB6C28ACC5E100D454A8 /* GameLifeSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6B28ACC5E000D454A8 /* GameLifeSpriteNode.swift */; };
 		FA45AB6E28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6D28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift */; };
 		FA45AB7028ACCAA700D454A8 /* LifeNodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6F28ACCAA700D454A8 /* LifeNodeState.swift */; };
+		FA45AB7228AD131C00D454A8 /* GameIconMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB7128AD131C00D454A8 /* GameIconMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		FA45AB6B28ACC5E000D454A8 /* GameLifeSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLifeSpriteNode.swift; sourceTree = "<group>"; };
 		FA45AB6D28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLifeSpriteNodeIconType.swift; sourceTree = "<group>"; };
 		FA45AB6F28ACCAA700D454A8 /* LifeNodeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeNodeState.swift; sourceTree = "<group>"; };
+		FA45AB7128AD131C00D454A8 /* GameIconMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIconMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				FA45AB6928ACBE9E00D454A8 /* GameSpeed.swift */,
 				FA45AB6B28ACC5E000D454A8 /* GameLifeSpriteNode.swift */,
 				FA45AB6D28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift */,
+				FA45AB7128AD131C00D454A8 /* GameIconMode.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				FA12AE1528ACAD120070A915 /* Persistence.swift in Sources */,
 				FA12AE0E28ACAD0F0070A915 /* ContentView.swift in Sources */,
 				FA45AB6528ACB26F00D454A8 /* GameCore.swift in Sources */,
+				FA45AB7228AD131C00D454A8 /* GameIconMode.swift in Sources */,
 				FA45AB6828ACBA8300D454A8 /* GameState.swift in Sources */,
 				FA45AB6A28ACBE9E00D454A8 /* GameSpeed.swift in Sources */,
 				FA12AE0C28ACAD0F0070A915 /* CivilGenerationsApp.swift in Sources */,

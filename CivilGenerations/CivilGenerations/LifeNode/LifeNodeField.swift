@@ -21,7 +21,7 @@ class LifeNodeField: ObservableObject {
     func inc(_ h: LifeNodeHash) {
         let c = counts[h]
         counts[h] = c == nil ? 1 : c! + 1
-        print("inc: [\(h):\(counts[h]!)]")
+        print("inc: [\(LifeNode(h: h).gridPointString):\(counts[h]!)]")
     }
     
     // decrease count at LifeNode

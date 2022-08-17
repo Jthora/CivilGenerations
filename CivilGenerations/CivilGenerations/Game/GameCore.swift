@@ -17,6 +17,13 @@ final class GameCore: ObservableObject {
     
     @Published var gameSpeed: GameSpeed = .normal
     @Published var gameState: GameState = .paused
+    @Published var iconMode: GameIconMode = .icons {
+        didSet {
+            DispatchQueue.main.async {
+                self.updateSprites()
+            }
+        }
+    }
     @Published var sprites: [LifeNodeHash:GameLifeSpriteNode] = [:]
     @Published var ruins: [LifeNodeHash:GameLifeSpriteNode] = [:]
     
@@ -95,7 +102,12 @@ final class GameCore: ObservableObject {
             guard let c = lifeNodeField.counts[h] else {
                 continue
             }
-            sprite.iconType = GameLifeSpriteNode.IconType(c)
+            switch iconMode {
+            case .icons:
+                sprite.iconType = GameLifeSpriteNode.IconType(c)
+            case .numbers:
+                sprite.numberValue = c
+            }
         }
         
         for h in spritesToRemove {

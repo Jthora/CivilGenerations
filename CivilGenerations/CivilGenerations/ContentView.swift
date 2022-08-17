@@ -36,18 +36,18 @@ struct ContentView: View {
                                         gameCore.gameSpeed = GameSpeed(rawValue: gameCore.gameSpeed.rawValue - 1) ?? .superSlow
                                     }, label: {
                                         Text("➖")
-                                            .frame(width: 40, height: 40)
-                                            .font(.system(size: 36))
+                                            .frame(width: 36, height: 40)
+                                            .font(.system(size: 32))
                                     })
                                     Text(gameCore.gameSpeed.icon)
-                                        .frame(width: 40, height: 40)
-                                        .font(.system(size: 36))
+                                        .frame(width: 36, height: 40)
+                                        .font(.system(size: 32))
                                     Button(action: {
                                         gameCore.gameSpeed = GameSpeed(rawValue: gameCore.gameSpeed.rawValue + 1) ?? .superFast
                                     }, label: {
                                         Text("➕")
-                                            .frame(width: 40, height: 40)
-                                            .font(.system(size: 36))
+                                            .frame(width: 36, height: 40)
+                                            .font(.system(size: 32))
                                     })
                                     Spacer()
                                 }
@@ -66,7 +66,17 @@ struct ContentView: View {
                                 })
                             }
                             Group {
-                                
+                                Button(action: {
+                                    switch gameCore.iconMode {
+                                        case .icons: gameCore.iconMode = .numbers
+                                        case .numbers: gameCore.iconMode = .icons
+                                    }
+                                }, label: {
+                                    Text(gameCore.iconMode.icon)
+                                        .frame(width: 40, height: 40)
+                                        .font(.system(size: 36))
+                                        .padding()
+                                })
                             }
                         }
                         .background(.white)
