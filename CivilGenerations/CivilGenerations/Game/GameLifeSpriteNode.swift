@@ -8,9 +8,32 @@
 import SpriteKit
 
 class GameLifeSpriteNode: SKSpriteNode {
-    var iconType:IconType = .land {
-        didSet {
-            
+    
+    var generationsUntilDecay:Int = 2
+    
+    var labelNode:SKLabelNode? = nil
+    
+    private var _iconType:IconType = .land
+    var iconType:IconType {
+        set {
+            guard _iconType != newValue else {return}
+            guard let labelNode = self.labelNode else {
+                labelNode = iconType.labelNode
+                addChild(labelNode!)
+                return
+            }
+            labelNode.text = iconType.emoji
+        }
+        
+        get {
+            return _iconType
+        }
+    }
+    
+    func decay() {
+        generationsUntilDecay -= 1
+        if generationsUntilDecay <= 0 {
+            iconType = .land
         }
     }
 }

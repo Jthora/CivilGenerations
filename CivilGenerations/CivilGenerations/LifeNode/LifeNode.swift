@@ -67,3 +67,9 @@ extension LifeNode: Hashable {
         hasher.combine(h)
     }
 }
+
+extension LifeNodeHash {
+    init(_ point:CGPoint) {
+        self = Int64(hi: Int32(point.x) + OFFSET, lo: Int32(point.y) + OFFSET)
+    }
+}

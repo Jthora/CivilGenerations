@@ -45,7 +45,25 @@ final class GameCore: ObservableObject {
     }
     
     func click(_ point:CGPoint) {
-        
+        let w = LifeNode(point)
+        if lifeNodeField.check(w) {
+            lifeNodeField.reset(w)
+        } else {
+            lifeNodeField.set(w)
+        }
+        updateSprites()
+    }
+    
+    func updateSprites() {
+        for (h,c) in lifeNodeField.counts {
+            if let sprite = sprites[h] {
+                sprite.iconType = GameLifeSpriteNode.IconType(c)
+            } else {
+                let sprite = GameLifeSpriteNode()
+                sprite.iconType = GameLifeSpriteNode.IconType(c)
+                sprites[h] = sprite
+            }
+        }
     }
 }
 
@@ -54,6 +72,7 @@ extension GameCore: GameSceneDelegate {
         switch gameState {
         case .running:
             lifeNodeField.step()
+            updateSprites()
             
         case .paused: ()
         }

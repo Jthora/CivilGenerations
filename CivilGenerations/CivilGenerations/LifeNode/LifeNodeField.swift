@@ -47,6 +47,10 @@ class LifeNodeField: ObservableObject {
 //        field.removeValue(forKey: w.h)
 //    }
     
+    func set(_ point:CGPoint) {
+        set(LifeNode(point))
+    }
+    
     func set(_ w:LifeNode) {
         inc(w.h-DX-DY)
         inc(w.h-DX)
@@ -59,6 +63,10 @@ class LifeNodeField: ObservableObject {
         field[w.h] = w
     }
     
+    func reset(_ point:CGPoint) {
+        reset(LifeNode(point))
+    }
+    
     func reset(_ w:LifeNode) {
         dec(w.h-DX-DY)
         dec(w.h-DX)
@@ -69,6 +77,18 @@ class LifeNodeField: ObservableObject {
         dec(w.h+DX)
         dec(w.h+DX+DY)
         field.removeValue(forKey: w.h)
+    }
+    
+    func check(_ point:CGPoint) -> Bool {
+        return field[LifeNodeHash(point)] != nil
+    }
+    
+    func check(_ w:LifeNode) -> Bool {
+        return field[w.h] != nil
+    }
+    
+    func check(_ h:LifeNodeHash) -> Bool {
+        return field[h] != nil
     }
     
     func clear() {
