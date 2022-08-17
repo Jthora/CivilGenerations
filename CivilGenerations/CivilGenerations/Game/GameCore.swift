@@ -46,7 +46,6 @@ final class GameCore: ObservableObject {
     
     var updateIter:TimeInterval = 0
     
-    @Published var cameraNode = SKCameraNode()
     @Published var scene: GameScene = {
         let scene = GameScene()
         scene.size = CGSize(width: UIScreen.main.bounds.width,
@@ -87,11 +86,6 @@ final class GameCore: ObservableObject {
         iconSpriteParent.removeAllChildren()
         numberSprites.removeAll()
         iconSprites.removeAll()
-        
-        // camera
-        cameraNode.position = CGPoint(x: scene.size.width / 2, y: scene.size.height / 2)
-        scene.addChild(cameraNode)
-        scene.camera = cameraNode
         
         // add sprite layers
         scene.addChild(numberSpriteParent)
@@ -233,3 +227,4 @@ extension GameCore: GameSceneDelegate {
         click(point)
     }
 }
+

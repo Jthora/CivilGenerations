@@ -29,6 +29,7 @@
 		FA45AB7028ACCAA700D454A8 /* LifeNodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6F28ACCAA700D454A8 /* LifeNodeState.swift */; };
 		FA45AB7228AD131C00D454A8 /* GameIconMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB7128AD131C00D454A8 /* GameIconMode.swift */; };
 		FA45AB7428AD1FE900D454A8 /* GameCountSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB7328AD1FE900D454A8 /* GameCountSpriteNode.swift */; };
+		FA45AB7828AD504200D454A8 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB7728AD504200D454A8 /* CGPoint+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		FA45AB6F28ACCAA700D454A8 /* LifeNodeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeNodeState.swift; sourceTree = "<group>"; };
 		FA45AB7128AD131C00D454A8 /* GameIconMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIconMode.swift; sourceTree = "<group>"; };
 		FA45AB7328AD1FE900D454A8 /* GameCountSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCountSpriteNode.swift; sourceTree = "<group>"; };
+		FA45AB7728AD504200D454A8 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +126,11 @@
 		FA12AE0A28ACAD0F0070A915 /* CivilGenerations */ = {
 			isa = PBXGroup;
 			children = (
+				FA45AB7628AD503100D454A8 /* Extensions */,
+				FA45AB7528AD502300D454A8 /* Math */,
 				FA45AB6628ACB27400D454A8 /* Game */,
 				FA12AE3A28ACAD380070A915 /* LifeNode */,
 				FA12AE0B28ACAD0F0070A915 /* CivilGenerationsApp.swift */,
-				FA12AE3E28ACAD380070A915 /* BitMath.swift */,
 				FA12AE0D28ACAD0F0070A915 /* ContentView.swift */,
 				FA12AE0F28ACAD120070A915 /* Assets.xcassets */,
 				FA12AE1428ACAD120070A915 /* Persistence.swift */,
@@ -186,6 +189,22 @@
 				FA45AB7128AD131C00D454A8 /* GameIconMode.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		FA45AB7528AD502300D454A8 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				FA12AE3E28ACAD380070A915 /* BitMath.swift */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		FA45AB7628AD503100D454A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA45AB7728AD504200D454A8 /* CGPoint+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +348,7 @@
 				FA12AE1528ACAD120070A915 /* Persistence.swift in Sources */,
 				FA12AE0E28ACAD0F0070A915 /* ContentView.swift in Sources */,
 				FA45AB6528ACB26F00D454A8 /* GameCore.swift in Sources */,
+				FA45AB7828AD504200D454A8 /* CGPoint+Extensions.swift in Sources */,
 				FA45AB7228AD131C00D454A8 /* GameIconMode.swift in Sources */,
 				FA45AB6828ACBA8300D454A8 /* GameState.swift in Sources */,
 				FA45AB6A28ACBE9E00D454A8 /* GameSpeed.swift in Sources */,

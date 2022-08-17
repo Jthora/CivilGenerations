@@ -17,6 +17,7 @@ struct ContentView: View {
     var body: some View {
         let screenWidth  = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
+        let cameraZoom = String(format: "%.2f", gameCore.scene.cameraNode.xScale)
         
         ZStack {
             Group {
@@ -34,6 +35,10 @@ struct ContentView: View {
                                 .font(.system(size: 16))
                                 .clipped()
                             Spacer()
+                            Text("\(cameraZoom) :🔎")
+                                .frame(width: 100, height: 40, alignment: .trailing)
+                                .font(.system(size: 16))
+                                .clipped()
                         }
                         .background(.white)
                     }.frame(maxHeight: .infinity, alignment: .top)
