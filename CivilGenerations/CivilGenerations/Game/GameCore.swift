@@ -51,8 +51,11 @@ final class GameCore: ObservableObject {
     }
     
     func reset() {
-        gameState = .paused
-        lifeNodeField.clear()
+        DispatchQueue.main.async {
+            self.gameState = .paused
+            self.lifeNodeField.clear()
+            self.updateSprites()
+        }
     }
     
     func setup() {

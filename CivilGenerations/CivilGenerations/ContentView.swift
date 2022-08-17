@@ -53,17 +53,25 @@ struct ContentView: View {
                                 }
                             }
                             Group {
-                                Button(action: {
-                                    switch gameCore.gameState {
-                                        case .paused: gameCore.start()
-                                        case .running: gameCore.pause()
-                                    }
-                                }, label: {
-                                    Text(gameCore.gameState.icon)
-                                        .frame(width: 40, height: 40)
-                                        .font(.system(size: 36))
-                                        .padding()
-                                })
+                                HStack {
+                                    Button(action: {
+                                        gameCore.reset()
+                                    }, label: {
+                                        Text("🔄")
+                                            .frame(width: 40, height: 40)
+                                            .font(.system(size: 36))
+                                    })
+                                    Button(action: {
+                                        switch gameCore.gameState {
+                                            case .paused: gameCore.start()
+                                            case .running: gameCore.pause()
+                                        }
+                                    }, label: {
+                                        Text(gameCore.gameState.icon)
+                                            .frame(width: 40, height: 40)
+                                            .font(.system(size: 36))
+                                    })
+                                }
                             }
                             Group {
                                 Button(action: {
