@@ -17,6 +17,7 @@ class GameScene: SKScene {
     
     @Published var cameraNode = SKCameraNode()
     var gameDelegate: GameSceneDelegate? = nil
+    var currentOffset:CGSize = .zero
     
     override func didMove(to view: SKView) {
         print("SpriteKit Scene Loaded")
@@ -25,14 +26,6 @@ class GameScene: SKScene {
         cameraNode.position = CGPoint(x: size.width / 2, y: size.height / 2)
         addChild(cameraNode)
         camera = cameraNode
-        
-        // Create the gesture recognizer for panning
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanFrom))
-        let pinchGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePinchFrom))
-        
-        // Add the gesture recognizer to the scene's view
-        view.addGestureRecognizer(panGestureRecognizer)
-        view.addGestureRecognizer(pinchGestureRecognizer)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -48,17 +41,16 @@ class GameScene: SKScene {
     }
     
     // Drag
-    @objc func handlePanFrom(_ recognizer: UIPanGestureRecognizer) {
+    func handlePan(dragOffset: CGSize) {
         // This function is called when a pan gesture is recognized.
-        if recognizer.numberOfTouches == 2 {
-            let deltaX = recognizer.translation(in: view).x
-            let deltaY = recognizer.translation(in: view).y
-
-            cameraNode.position.x -= deltaX
-            cameraNode.position.y += deltaY
-
-            recognizer.setTranslation(CGPoint(x: 0, y: 0), in: view)
-        }
+        cameraNode.position.x = -dragOffset.width + currentOffset.width
+        cameraNode.position.y = dragOffset.height + currentOffset.height
+    }
+    
+    func completePan(dragOffset: CGSize) {
+        currentOffset.width += -dragOffset.width
+        currentOffset.height += dragOffset.height
+        
     }
     
     // Zoom
