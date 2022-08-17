@@ -32,6 +32,11 @@ struct LifeNode
         self.h = Int64(hi: x, lo: y)
     }
     
+    init(h: LifeNodeHash)
+    {
+        self.h = h
+    }
+    
     var string:String {
         return "(\(x),\(y))";
     }
@@ -51,7 +56,7 @@ struct LifeNode
         return CGPoint(x: Int(x), y: Int(y))
     }
     var gridPointString:String {
-        return "(\(Int(CGFloat(x)/CONVERSION_SCALE)),\(Int(CGFloat(y)/CONVERSION_SCALE)))"
+        return "(\(x),\(y))"
     }
 }
 

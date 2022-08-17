@@ -117,11 +117,20 @@ class LifeNodeField: ObservableObject {
                c < 2 || 3 < c {
                 print("toReset: \(w.gridPointString)")
                 toReset[w.h] = w
-            } else {
-                print("toSet: \(w.gridPointString)")
-                toSet[w.h] = w
             }
         }
+        
+        for (h,c) in counts {
+            if c == 3,
+                field[h] == nil {
+                print("toSet: c: \(c)")
+                toSet[h] = LifeNode(h: h)
+            }
+        }
+        
+//        for (Point w : counts.keySet ()) {
+//            if (counts.get (w) == 3 && ! field.contains (w)) toSet.add (w);
+//        }
         
         for (_,w) in toReset {
             reset(w)
@@ -131,4 +140,23 @@ class LifeNodeField: ObservableObject {
             set(w)
         }
     }
+//
+//    public void step ()
+//    {
+//        ArrayList<Point> toReset = new ArrayList<Point> ();
+//        ArrayList<Point> toSet = new ArrayList<Point> ();
+//        for (Point w : field) {
+//            Integer c = counts.get (w);
+//            if (c == null || c < 2 || c > 3) toReset.add (w);
+//        }
+//        for (Point w : counts.keySet ()) {
+//            if (counts.get (w) == 3 && ! field.contains (w)) toSet.add (w);
+//        }
+//        for (Point w : toReset) {
+//            reset (w);
+//        }
+//        for (Point w : toSet) {
+//            set (w);
+//        }
+//    }
 }
