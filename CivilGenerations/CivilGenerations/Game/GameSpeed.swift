@@ -39,4 +39,23 @@ enum GameSpeed: Int {
         case .superFast: return "🚀"
         }
     }
+    
+    var updateRate: TimeInterval {
+        switch self {
+        case .superSlow:
+            return 1/120
+        case .verySlow:
+            return 1/60
+        case .slow:
+            return 1/30
+        case .normal:
+            return 1/15
+        case .fast:
+            return 1/8
+        case .veryFast:
+            return 1/4
+        case .superFast:
+            return 1/2
+        }
+    }
 }

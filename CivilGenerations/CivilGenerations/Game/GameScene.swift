@@ -18,7 +18,7 @@ class GameScene: SKScene {
     var gameDelegate: GameSceneDelegate? = nil
     
     override func didMove(to view: SKView) {
-        print("You are in the game scene!")
+        print("Loaded")
     }
     
     override func update(_ currentTime: TimeInterval) {

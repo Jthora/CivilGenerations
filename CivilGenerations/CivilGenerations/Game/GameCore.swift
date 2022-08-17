@@ -22,6 +22,9 @@ final class GameCore: ObservableObject {
     
     @Published var lifeNodeField = LifeNodeField()
     
+    
+    var updateIter:TimeInterval = 0
+    
     @Published var scene: GameScene = {
         let scene = GameScene()
         scene.size = CGSize(width: UIScreen.main.bounds.width,
@@ -91,13 +94,17 @@ final class GameCore: ObservableObject {
 extension GameCore: GameSceneDelegate {
     
     func updateGame() {
-        switch gameState {
-        case .running:
-            lifeNodeField.step()
-            updateSprites()
-            
-        case .paused: ()
-        }
+            switch gameState {
+            case .running:
+                updateIter += gameSpeed.updateRate
+                if updateIter >= 1 {
+                    updateIter = 0
+                    lifeNodeField.step()
+                    updateSprites()
+                }
+                
+            case .paused: ()
+            }
     }
     
     func onTouch(point: CGPoint) {
