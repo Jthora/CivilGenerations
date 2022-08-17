@@ -13,7 +13,9 @@ final class GameCore: ObservableObject {
     private init() {}
     
     @Published var gameState: GameState = .paused
-    @Published var sprites: [SKSpriteNode] = []
+    @Published var sprites: [LifeNodeHash:GameLifeSpriteNode] = [:]
+    @Published var ruins: [LifeNodeHash:GameLifeSpriteNode] = [:]
+    
     @Published var lifeNodeField = LifeNodeField()
     
     @Published var scene: SKScene = {

@@ -24,6 +24,9 @@
 		FA45AB6528ACB26F00D454A8 /* GameCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6428ACB26F00D454A8 /* GameCore.swift */; };
 		FA45AB6828ACBA8300D454A8 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6728ACBA8300D454A8 /* GameState.swift */; };
 		FA45AB6A28ACBE9E00D454A8 /* GameSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6928ACBE9E00D454A8 /* GameSpeed.swift */; };
+		FA45AB6C28ACC5E100D454A8 /* GameLifeSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6B28ACC5E000D454A8 /* GameLifeSpriteNode.swift */; };
+		FA45AB6E28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6D28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift */; };
+		FA45AB7028ACCAA700D454A8 /* LifeNodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB6F28ACCAA700D454A8 /* LifeNodeState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		FA45AB6428ACB26F00D454A8 /* GameCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCore.swift; sourceTree = "<group>"; };
 		FA45AB6728ACBA8300D454A8 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		FA45AB6928ACBE9E00D454A8 /* GameSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSpeed.swift; sourceTree = "<group>"; };
+		FA45AB6B28ACC5E000D454A8 /* GameLifeSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLifeSpriteNode.swift; sourceTree = "<group>"; };
+		FA45AB6D28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLifeSpriteNodeIconType.swift; sourceTree = "<group>"; };
+		FA45AB6F28ACCAA700D454A8 /* LifeNodeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeNodeState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 			children = (
 				FA12AE3F28ACAD380070A915 /* LifeNode.swift */,
 				FA12AE3B28ACAD380070A915 /* LifeNodeField.swift */,
+				FA45AB6F28ACCAA700D454A8 /* LifeNodeState.swift */,
 			);
 			path = LifeNode;
 			sourceTree = "<group>";
@@ -169,6 +176,8 @@
 				FA45AB6428ACB26F00D454A8 /* GameCore.swift */,
 				FA45AB6728ACBA8300D454A8 /* GameState.swift */,
 				FA45AB6928ACBE9E00D454A8 /* GameSpeed.swift */,
+				FA45AB6B28ACC5E000D454A8 /* GameLifeSpriteNode.swift */,
+				FA45AB6D28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -304,7 +313,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA12AE4828ACB0090070A915 /* GameScene.swift in Sources */,
+				FA45AB7028ACCAA700D454A8 /* LifeNodeState.swift in Sources */,
 				FA12AE4328ACAD380070A915 /* BitMath.swift in Sources */,
+				FA45AB6C28ACC5E100D454A8 /* GameLifeSpriteNode.swift in Sources */,
+				FA45AB6E28ACC61900D454A8 /* GameLifeSpriteNodeIconType.swift in Sources */,
 				FA12AE4028ACAD380070A915 /* LifeNodeField.swift in Sources */,
 				FA12AE4428ACAD380070A915 /* LifeNode.swift in Sources */,
 				FA12AE1528ACAD120070A915 /* Persistence.swift in Sources */,
