@@ -20,6 +20,14 @@ final class GameCore: ObservableObject {
     @Published var iconMode: GameIconMode = .icons {
         didSet {
             DispatchQueue.main.async {
+                switch self.iconMode {
+                case .numbers:
+                    self.iconSpriteParent.isHidden = true
+                    self.numberSpriteParent.isHidden = false
+                case .icons:
+                    self.iconSpriteParent.isHidden = false
+                    self.numberSpriteParent.isHidden = true
+                }
                 self.updateSprites()
             }
         }
@@ -72,6 +80,8 @@ final class GameCore: ObservableObject {
         
         scene.addChild(numberSpriteParent)
         scene.addChild(iconSpriteParent)
+        
+        iconMode = iconMode // Reset
     }
     
     func click(_ point:CGPoint) {
