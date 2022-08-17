@@ -26,6 +26,7 @@ struct ContentView: View {
             }
             Group {
                 VStack {
+                    // Top Details Bar
                     Group{
                         HStack {
                             Text("➰: \(gameCore.generations)")
@@ -36,31 +37,42 @@ struct ContentView: View {
                         }
                         .background(.white)
                     }.frame(maxHeight: .infinity, alignment: .top)
+                    
+                    // Midle Empty Space (for visibility into Scene)
                     Spacer()
                     
+                    // Bottom Control Bar
                     Group{
                         HStack {
                             Group {
-                                HStack {
-                                    Button(action: {
-                                        gameCore.gameSpeed = GameSpeed(rawValue: gameCore.gameSpeed.rawValue - 1) ?? .superSlow
-                                    }, label: {
-                                        Text("➖")
-                                            .frame(width: 36, height: 40)
-                                            .font(.system(size: 32))
-                                    })
-                                    Text(gameCore.gameSpeed.icon)
-                                        .frame(width: 36, height: 40)
-                                        .font(.system(size: 32))
-                                    Button(action: {
-                                        gameCore.gameSpeed = GameSpeed(rawValue: gameCore.gameSpeed.rawValue + 1) ?? .superFast
-                                    }, label: {
-                                        Text("➕")
-                                            .frame(width: 36, height: 40)
-                                            .font(.system(size: 32))
-                                    })
-                                    Spacer()
+                                VStack {
+                                    Text(gameCore.gameSpeed.string)
+                                        .frame(width: 100, height: 10, alignment: .center)
+                                        .font(.system(size: 12))
+                                    HStack {
+                                        Button(action: {
+                                            gameCore.gameSpeed = GameSpeed(rawValue: gameCore.gameSpeed.rawValue - 1) ?? .superSlow
+                                        }, label: {
+                                            Text("➖")
+                                                .frame(width: 30, height: 30)
+                                                .font(.system(size: 30))
+                                        })
+                                        VStack {
+                                            Text(gameCore.gameSpeed.icon)
+                                                .frame(width: 32, height: 30)
+                                                .font(.system(size: 30))
+                                        }
+                                        Button(action: {
+                                            gameCore.gameSpeed = GameSpeed(rawValue: gameCore.gameSpeed.rawValue + 1) ?? .superFast
+                                        }, label: {
+                                            Text("➕")
+                                                .frame(width: 30, height: 30)
+                                                .font(.system(size: 30))
+                                        })
+                                        Spacer()
+                                    }
                                 }
+                                
                             }
                             Group {
                                 HStack {
