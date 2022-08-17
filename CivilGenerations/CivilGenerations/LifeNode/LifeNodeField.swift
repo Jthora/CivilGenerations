@@ -52,7 +52,7 @@ class LifeNodeField: ObservableObject {
     }
     
     func set(_ w:LifeNode) {
-        print("set")
+        print("set: \(w.string)")
         inc(w.h-DX-DY)
         inc(w.h-DX)
         inc(w.h-DX+DY)
@@ -69,7 +69,7 @@ class LifeNodeField: ObservableObject {
     }
     
     func reset(_ w:LifeNode) {
-        print("reset")
+        print("reset: \(w.string)")
         dec(w.h-DX-DY)
         dec(w.h-DX)
         dec(w.h-DX+DY)

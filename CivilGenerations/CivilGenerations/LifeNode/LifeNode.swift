@@ -8,7 +8,7 @@
 import UIKit
 
 
-let OFFSET:Int32 = Int32(truncatingIfNeeded: 0x80000000)
+let OFFSET:Int32 = Int32(bitPattern: 0x80000000)
 
 typealias LifeNodeHash = Int64
 
@@ -18,12 +18,12 @@ struct LifeNode
     var h: LifeNodeHash
     
     // Coordinates
-    var x: Int { return Int(h.hi) - Int(OFFSET) }
-    var y: Int { return Int(h.lo) - Int(OFFSET) }
+    var x: Int { return Int(h.hi) }
+    var y: Int { return Int(h.lo) }
     
     init(_ point:CGPoint)
     {
-        self.h = Int64(hi: Int32(point.x) + OFFSET, lo: Int32(point.y) + OFFSET)
+        self.h = Int64(hi: Int32(point.x), lo: Int32(point.y))
     }
     
     init(x: Int32, y: Int32)
@@ -74,11 +74,11 @@ extension LifeNodeHash {
     init(_ point:CGPoint) {
         let x = Int(point.x / CONVERSION_SCALE)
         let y = Int(point.y / CONVERSION_SCALE)
-        self = Int64(hi: Int32(x) + OFFSET, lo: Int32(y) + OFFSET)
+        self = Int64(hi: Int32(x), lo: Int32(y))
     }
     var position:CGPoint {
-        let x = Int32(hi)// - Int32(OFFSET)
-        let y = Int32(lo)// - Int32(OFFSET)
+        let x = hi //&+ OFFSET
+        let y = lo //&+ OFFSET
         return CGPoint(x: Int(x)*Int(CONVERSION_SCALE), y: Int(y)*Int(CONVERSION_SCALE))
     }
 }
