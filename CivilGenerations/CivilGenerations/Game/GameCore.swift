@@ -154,6 +154,7 @@ final class GameCore: ObservableObject {
                 newSprite.iconType = GameLifeSpriteNode.IconType(c)
                 newSprite.position = h.position
                 iconSprites[h] = newSprite
+                iconSpriteParent.addChild(newSprite)
             }
         }
         
