@@ -19,50 +19,13 @@ struct ContentView: View {
         let screenHeight = UIScreen.main.bounds.height
         let cameraZoom = String(format: "%.2f", gameCore.scene.cameraNode.xScale)
         
-        // Drag Controls
-        @State var location: CGPoint = .zero
-        @GestureState var fingerLocation: CGPoint? = nil
-        @GestureState var startLocation: CGPoint? = nil // 1
         
-        var simpleDrag: some Gesture {
-            DragGesture()
-                .onChanged { value in
-                    var newLocation = startLocation ?? location // 3
-                    newLocation.x += value.translation.width
-                    newLocation.y += value.translation.height
-                    self.location = newLocation
-                }.updating($startLocation) { (value, startLocation, transaction) in
-                    startLocation = startLocation ?? location // 2
-                }
-        }
-        
-        var fingerDrag: some Gesture {
-            DragGesture()
-                .updating($fingerLocation) { (value, fingerLocation, transaction) in
-                    fingerLocation = value.location
-                }
-        }
         
         ZStack {
             Group {
                 SpriteView(scene: gameCore.scene)
                     .frame(width: screenWidth, height: screenHeight)
                     .ignoresSafeArea()
-                    .gesture(
-                        simpleDrag.simultaneously(with: fingerDrag)
-                        DragGesture()
-                        .onChanged { gesture in
-                            if gesture.touches.count == 2 {
-                                gameCore.scene.handlePan(dragOffset: gesture.translation)
-                            }
-                        }
-                        .onEnded { gesture in
-                            if gesture.touches.count == 2 {
-                                gameCore.scene.completePan(dragOffset: gesture.translation)
-                            }
-                            
-                        }
-                    )
             }
             Group {
                 VStack {
