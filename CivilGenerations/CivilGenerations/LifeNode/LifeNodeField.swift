@@ -117,6 +117,8 @@ class LifeNodeField: ObservableObject {
                c < 2 || 3 < c {
                 print("toReset: \(w.gridPointString)")
                 toReset[w.h] = w
+            } else {
+                toReset[w.h] = w
             }
         }
         
