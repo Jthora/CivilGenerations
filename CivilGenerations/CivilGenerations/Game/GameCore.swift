@@ -15,6 +15,7 @@ final class GameCore: ObservableObject {
         setup()
     }
     
+    @Published var location: CGPoint = .zero
     
     @Published var generations:Int = 0
     @Published var gameSpeed: GameSpeed = .normal
