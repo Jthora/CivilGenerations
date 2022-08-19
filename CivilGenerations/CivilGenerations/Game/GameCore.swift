@@ -56,12 +56,12 @@ final class GameCore: ObservableObject {
     
     
     func start() {
-        print("start")
+        Debug.log("start")
         gameState = .running
     }
     
     func pause() {
-        print("pause")
+        Debug.log("pause")
         gameState = .paused
     }
     
@@ -102,7 +102,7 @@ final class GameCore: ObservableObject {
         let y = Int((point.y + (CONVERSION_SCALE/2)) / CONVERSION_SCALE)
         let w = LifeNode(x: Int32(x), y: Int32(y))
         let h = w.h
-        print("Click \(w.string) \(point)")
+        Debug.log("Click \(w.string) \(point)")
         if lifeNodeField.check(w) {
             lifeNodeField.reset(w)
             iconSprites[w.h]?.removeFromParent()
@@ -118,14 +118,14 @@ final class GameCore: ObservableObject {
             } else {
                 let sprite = GameLifeSpriteNode()
                 sprite.position = h.position
-                print("Sprite \(w.string) \(h.position)")
+                Debug.log("Sprite \(w.string) \(h.position)")
                 sprite.iconType = GameLifeSpriteNode.IconType(1)
                 iconSprites[h] = sprite
                 iconSpriteParent.addChild(sprite)
             }
         }
-        print("Nodes: \(lifeNodeField.field.count)")
-        print("Count: \(lifeNodeField.counts.count)")
+        Debug.log("Nodes: \(lifeNodeField.field.count)")
+        Debug.log("Count: \(lifeNodeField.counts.count)")
         updateSprites()
     }
     

@@ -30,6 +30,7 @@
 		FA45AB7228AD131C00D454A8 /* GameIconMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB7128AD131C00D454A8 /* GameIconMode.swift */; };
 		FA45AB7428AD1FE900D454A8 /* GameCountSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB7328AD1FE900D454A8 /* GameCountSpriteNode.swift */; };
 		FA45AB7828AD504200D454A8 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB7728AD504200D454A8 /* CGPoint+Extensions.swift */; };
+		FA45AB7B28AF0CB900D454A8 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45AB7A28AF0CB900D454A8 /* Debug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		FA45AB7128AD131C00D454A8 /* GameIconMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIconMode.swift; sourceTree = "<group>"; };
 		FA45AB7328AD1FE900D454A8 /* GameCountSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCountSpriteNode.swift; sourceTree = "<group>"; };
 		FA45AB7728AD504200D454A8 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		FA45AB7A28AF0CB900D454A8 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		FA12AE0A28ACAD0F0070A915 /* CivilGenerations */ = {
 			isa = PBXGroup;
 			children = (
+				FA45AB7928AF0CAD00D454A8 /* Debug */,
 				FA45AB7628AD503100D454A8 /* Extensions */,
 				FA45AB7528AD502300D454A8 /* Math */,
 				FA45AB6628ACB27400D454A8 /* Game */,
@@ -205,6 +208,14 @@
 				FA45AB7728AD504200D454A8 /* CGPoint+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA45AB7928AF0CAD00D454A8 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				FA45AB7A28AF0CB900D454A8 /* Debug.swift */,
+			);
+			path = Debug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +350,7 @@
 			files = (
 				FA12AE4828ACB0090070A915 /* GameScene.swift in Sources */,
 				FA45AB7028ACCAA700D454A8 /* LifeNodeState.swift in Sources */,
+				FA45AB7B28AF0CB900D454A8 /* Debug.swift in Sources */,
 				FA12AE4328ACAD380070A915 /* BitMath.swift in Sources */,
 				FA45AB6C28ACC5E100D454A8 /* GameLifeSpriteNode.swift in Sources */,
 				FA45AB7428AD1FE900D454A8 /* GameCountSpriteNode.swift in Sources */,

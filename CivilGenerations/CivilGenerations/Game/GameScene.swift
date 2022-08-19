@@ -20,7 +20,7 @@ class GameScene: SKScene {
     var currentOffset:CGSize = .zero
     
     override func didMove(to view: SKView) {
-        print("SpriteKit Scene Loaded")
+        Debug.log("SpriteKit Scene Loaded")
         
         // camera
         cameraNode.position = CGPoint(x: size.width / 2, y: size.height / 2)

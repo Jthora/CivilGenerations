@@ -21,23 +21,23 @@ class LifeNodeField: ObservableObject {
     func inc(_ h: LifeNodeHash) {
         let c = counts[h]
         counts[h] = c == nil ? 1 : c! + 1
-        print("inc: [\(LifeNode(h: h).gridPointString):\(counts[h]!)]")
+        Debug.log("inc: [\(LifeNode(h: h).gridPointString):\(counts[h]!)]")
     }
     
     // decrease count at LifeNode
     func dec(_ h: LifeNodeHash) {
-        print("dec: count: \(counts.count)")
+        Debug.log("dec: count: \(counts.count)")
         guard let c = counts[h] else {
-            print("dec: count not found")
+            Debug.log("dec: count not found")
             return
         }
         if c != 0 {
-            print("dec: dec [\(h):\(counts[h]!)]")
+            Debug.log("dec: dec [\(h):\(counts[h]!)]")
             counts[h] = c-1
         }
-        print("dec: count inc: [\(h):\(counts[h]!)]")
+        Debug.log("dec: count inc: [\(h):\(counts[h]!)]")
         if counts[h]! <= 0 {
-            print("dec: remove")
+            Debug.log("dec: remove")
             counts.removeValue(forKey: h)
         }
     }
@@ -61,7 +61,7 @@ class LifeNodeField: ObservableObject {
     }
     
     func set(_ w:LifeNode) {
-        print("set: \(w.string)")
+        Debug.log("set: \(w.string)")
         inc(w.h-DX-DY)
         inc(w.h-DX)
         inc(w.h-DX+DY)
@@ -78,7 +78,7 @@ class LifeNodeField: ObservableObject {
     }
     
     func reset(_ w:LifeNode) {
-        print("reset: \(w.string)")
+        Debug.log("reset: \(w.string)")
         dec(w.h-DX-DY)
         dec(w.h-DX)
         dec(w.h-DX+DY)
@@ -108,13 +108,13 @@ class LifeNodeField: ObservableObject {
     }
     
     func step() {
-        print("step")
+        Debug.log("step")
         var toReset = [LifeNodeHash:LifeNode]()
         var toSet = [LifeNodeHash:LifeNode]()
         
         for (_,w) in field {
             if let c = counts[w.h] {
-                print("toReset: \(w.gridPointString)")
+                Debug.log("toReset: \(w.gridPointString)")
                 if c < 2 || 3 < c {
                     toReset[w.h] = w
                 }
@@ -126,7 +126,7 @@ class LifeNodeField: ObservableObject {
         for (h,c) in counts {
             if c == 3,
                 field[h] == nil {
-                print("toSet: c: \(c)")
+                Debug.log("toSet: c: \(c)")
                 toSet[h] = LifeNode(h: h)
             }
         }
