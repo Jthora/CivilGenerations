@@ -113,10 +113,11 @@ class LifeNodeField: ObservableObject {
         var toSet = [LifeNodeHash:LifeNode]()
         
         for (_,w) in field {
-            if let c = counts[w.h],
-               c < 2 || 3 < c {
+            if let c = counts[w.h] {
                 print("toReset: \(w.gridPointString)")
-                toReset[w.h] = w
+                if c < 2 || 3 < c {
+                    toReset[w.h] = w
+                }
             } else {
                 toReset[w.h] = w
             }
